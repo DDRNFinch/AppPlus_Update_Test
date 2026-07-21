@@ -34,9 +34,7 @@ jobs:
       - name: Install Expo web packages
         working-directory: apprentice-plus
         run: |
-          npx expo install react-native-web@~0.19.10
-          npx expo install react-dom@18.2.0
-          npx expo install @expo/metro-runtime@~3.2.3
+          npx expo install react-native-web react-dom @expo/metro-runtime --fix
 
       - name: Build web version
         working-directory: apprentice-plus
