@@ -1,0 +1,2364 @@
+{
+  "courseId": "carpentry-joinery-site-carpenter-st0264-v1-4",
+  "title": "Carpentry and Joinery (Site Carpenter pathway)",
+  "standardCode": "ST0264",
+  "version": "1.4",
+  "level": 2,
+  "pathway": "Site Carpenter",
+  "route": "Construction and the built environment",
+  "typicalDurationMonths": 24,
+  "source": "Institute for Apprenticeships and Technical Education / Skills England published standard",
+  "ksbs": {
+    "knowledge": [
+      {
+        "code": "K1",
+        "text": "Awareness of health and safety regulations, standards, and guidance and impact on role: CoSHH, fire safety, Health and Safety at Work Act, asbestos awareness, manual handling, signage, fire extinguishers, situational awareness, slips/trips/falls, confined spaces, working at height, PUWER and electrical safety."
+      },
+      {
+        "code": "K2",
+        "text": "Safety control equipment and how to use personal protective equipment (PPE), respiratory protective equipment (RPE) and local exhaust ventilation (LEV) dust suppression."
+      },
+      {
+        "code": "K3",
+        "text": "Safe systems of work: site inductions, toolbox talks, risk assessments, method statements and hazard identification in the work area."
+      },
+      {
+        "code": "K4",
+        "text": "Impact of the sector on the environment: efficient use of resources, recycling, reuse, safe disposal of waste and sustainable forestry."
+      },
+      {
+        "code": "K5",
+        "text": "Principles of building: foundations, roofs, walls, damp proof courses, floors, utilities and services, internal plaster finishes, insulation, fire protection, moisture and air protection and quality of materials."
+      },
+      {
+        "code": "K6",
+        "text": "Basic principles of digital design and modelling systems."
+      },
+      {
+        "code": "K7",
+        "text": "Standards and regulations associated with carpentry activities: British standards, building regulations and warranty provider standards."
+      },
+      {
+        "code": "K8",
+        "text": "Methods of interpreting and extracting relevant information from drawings and specifications."
+      },
+      {
+        "code": "K9",
+        "text": "Materials and their characteristics of home grown and imported timber and timber-based products: natural timber (hardwood/softwood), manufactured timber products (board, laminated timber and carcassing)."
+      },
+      {
+        "code": "K10",
+        "text": "Timber decay and repair methods: timber moisture content parameters, wet rot, dry rot and insect attack."
+      },
+      {
+        "code": "K11",
+        "text": "Carpentry and joinery products and purpose: mastics, preservatives, wood fillers, plastics and ironmongery."
+      },
+      {
+        "code": "K12",
+        "text": "Basic material estimation techniques: calculating lengths of timber, fixing requirements and cutting list production methods."
+      },
+      {
+        "code": "K13",
+        "text": "Verbal communication techniques and construction terminology."
+      },
+      {
+        "code": "K14",
+        "text": "Hand tool use and storage methods and techniques: chisels, planes, hand saws, hammers, squares, tri-square, bevels, marking and mortise gauges, spirit levels."
+      },
+      {
+        "code": "K15",
+        "text": "Hand tool maintenance and sharpening techniques."
+      },
+      {
+        "code": "K16",
+        "text": "Jig production techniques."
+      },
+      {
+        "code": "K17",
+        "text": "Power tools use and storage methods and techniques: portable circular saws, drills, saws, planers, routers, sanders, multi-functional tools and nail guns."
+      },
+      {
+        "code": "K18",
+        "text": "Principles of good team working."
+      },
+      {
+        "code": "K19",
+        "text": "Inclusion, equity and diversity in the workplace."
+      },
+      {
+        "code": "K20",
+        "text": "Well-being: mental and physical health considerations in self and others and how to access support."
+      },
+      {
+        "code": "K40",
+        "text": "Employment types (self-employed and employed), small business start-up principles and tax."
+      },
+      {
+        "code": "K21",
+        "text": "Site carpentry techniques: measuring, marking out, fitting, cutting (straight and angled) and mitring."
+      },
+      {
+        "code": "K22",
+        "text": "Site carpentry: structural fixtures and timber sizing in site carpentry, how to use sizing tables."
+      },
+      {
+        "code": "K23",
+        "text": "Site Carpenter: timber sizing tables purpose and use."
+      },
+      {
+        "code": "K24",
+        "text": "Site carpentry: timber splicing and scribing techniques."
+      },
+      {
+        "code": "K25",
+        "text": "Site carpentry: straight roof installation techniques: basic rafter trussed (prefabricated) and traditional cut roof (built on site)."
+      },
+      {
+        "code": "K26",
+        "text": "Site carpentry: flat roofs: warm and cold flat roofs including firings and coverings."
+      },
+      {
+        "code": "K27",
+        "text": "Site carpentry: first fixing installation techniques: structural carcassing, floor joists and coverings, straight flights of stairs, metal and timber stud partitions."
+      },
+      {
+        "code": "K28",
+        "text": "Site carpentry: second fix installation techniques: service encasement, cladding, wall and floor units and fitments, handrails and spindles to straight flights of stairs, doors and mouldings (architrave and skirting board)."
+      },
+      {
+        "code": "K29",
+        "text": "Site carpentry: types, use, calibration and storage of laser levels."
+      }
+    ],
+    "skills": [
+      {
+        "code": "S1",
+        "text": "Comply with health and safety regulations, standards, and guidance."
+      },
+      {
+        "code": "S2",
+        "text": "Identify and use safety control equipment, for example RPE, dust suppression, PPE and LEV."
+      },
+      {
+        "code": "S3",
+        "text": "Comply with environmental and sustainability regulations, standards, and guidance. Segregate resources for reuse, recycling and disposal."
+      },
+      {
+        "code": "S4",
+        "text": "Comply with industry regulations, standards, and guidance."
+      },
+      {
+        "code": "S5",
+        "text": "Prepare and maintain a safe working area."
+      },
+      {
+        "code": "S6",
+        "text": "Interpret and use information from drawings and specifications."
+      },
+      {
+        "code": "S7",
+        "text": "Estimate required materials and produce a cutting list."
+      },
+      {
+        "code": "S8",
+        "text": "Verbally communicate with others, applying construction terminology."
+      },
+      {
+        "code": "S9",
+        "text": "Select, use and store hand tools."
+      },
+      {
+        "code": "S10",
+        "text": "Select, use and store power tools."
+      },
+      {
+        "code": "S11",
+        "text": "Maintain and sharpen hand tools."
+      },
+      {
+        "code": "S12",
+        "text": "Produce jigs."
+      },
+      {
+        "code": "S13",
+        "text": "Identifies well-being support available to self and others."
+      },
+      {
+        "code": "S14",
+        "text": "Site carpenter: apply first fix techniques and practices for structural carcassing, straight timber or metal partition walls, floor joists, floor joist coverings, straight flights of stairs and external (window or door) frames."
+      },
+      {
+        "code": "S15",
+        "text": "Site carpenter: install structural fixings."
+      },
+      {
+        "code": "S16",
+        "text": "Site carpenter: size timber from sizing tables."
+      },
+      {
+        "code": "S17",
+        "text": "Site carpenter: apply site second fix techniques and practices for service encasement, cladding, wall and floor units and fitments, handrails and spindles to straight flights of stairs, internal and external doors, skirting boards and architrave."
+      },
+      {
+        "code": "S18",
+        "text": "Site carpenter: apply site carpenter techniques and practices to construction of rafter roofs, including trussed (prefabricated) and traditional (built on site), including construction of verge, eaves and loft access."
+      },
+      {
+        "code": "S19",
+        "text": "Site carpenter: use and store laser levels, for example cross line laser."
+      },
+      {
+        "code": "S20",
+        "text": "Site carpenter: form connections, for example using joints, nails, screws, bolts and adhesive."
+      },
+      {
+        "code": "S21",
+        "text": "Site carpenter: apply measuring, marking out, cutting (square and angled), mitring, hinging and recessing techniques."
+      },
+      {
+        "code": "S22",
+        "text": "Site carpenter: carrying out splicing and scribing techniques."
+      }
+    ],
+    "behaviours": [
+      {
+        "code": "B1",
+        "text": "Put health, safety and wellbeing first."
+      },
+      {
+        "code": "B2",
+        "text": "Consider the environment when using resources and carrying out processes."
+      },
+      {
+        "code": "B3",
+        "text": "Contribute to an inclusive and diverse culture."
+      },
+      {
+        "code": "B4",
+        "text": "Seek learning and development opportunities."
+      },
+      {
+        "code": "B5",
+        "text": "Team-focus to meet team goals including, considering the wider build team."
+      }
+    ]
+  },
+  "assignments": [
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a1",
+      "order": 1,
+      "title": "Health, Safety & Site Environment",
+      "ksbs": [
+        "S1",
+        "S2",
+        "S5",
+        "K1",
+        "K2",
+        "K3",
+        "B1"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Health, Safety & Site Environment",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Health, Safety & Site Environment",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S1",
+          "prompt": "Explain how your evidence for this assignment demonstrates S1.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S2",
+          "prompt": "Explain how your evidence for this assignment demonstrates S2.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S5",
+          "prompt": "Explain how your evidence for this assignment demonstrates S5.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K1",
+          "prompt": "Explain how your evidence for this assignment demonstrates K1.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K2",
+          "prompt": "Explain how your evidence for this assignment demonstrates K2.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K3",
+          "prompt": "Explain how your evidence for this assignment demonstrates K3.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B1",
+          "prompt": "Explain how your evidence for this assignment demonstrates B1.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a2",
+      "order": 2,
+      "title": "Standards, Regulations & Sustainability",
+      "ksbs": [
+        "S3",
+        "S4",
+        "K4",
+        "K7",
+        "B2"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Standards, Regulations & Sustainability",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Standards, Regulations & Sustainability",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S3",
+          "prompt": "Explain how your evidence for this assignment demonstrates S3.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S4",
+          "prompt": "Explain how your evidence for this assignment demonstrates S4.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K4",
+          "prompt": "Explain how your evidence for this assignment demonstrates K4.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K7",
+          "prompt": "Explain how your evidence for this assignment demonstrates K7.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B2",
+          "prompt": "Explain how your evidence for this assignment demonstrates B2.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a3",
+      "order": 3,
+      "title": "Drawings, Digital Design & Building Principles",
+      "ksbs": [
+        "S6",
+        "K5",
+        "K6",
+        "K8"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Drawings, Digital Design & Building Principles",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Drawings, Digital Design & Building Principles",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S6",
+          "prompt": "Explain how your evidence for this assignment demonstrates S6.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K5",
+          "prompt": "Explain how your evidence for this assignment demonstrates K5.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K6",
+          "prompt": "Explain how your evidence for this assignment demonstrates K6.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K8",
+          "prompt": "Explain how your evidence for this assignment demonstrates K8.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a4",
+      "order": 4,
+      "title": "Materials, Estimating & Cutting Lists",
+      "ksbs": [
+        "S7",
+        "K9",
+        "K10",
+        "K11",
+        "K12"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Materials, Estimating & Cutting Lists",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Materials, Estimating & Cutting Lists",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S7",
+          "prompt": "Explain how your evidence for this assignment demonstrates S7.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K9",
+          "prompt": "Explain how your evidence for this assignment demonstrates K9.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K10",
+          "prompt": "Explain how your evidence for this assignment demonstrates K10.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K11",
+          "prompt": "Explain how your evidence for this assignment demonstrates K11.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K12",
+          "prompt": "Explain how your evidence for this assignment demonstrates K12.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a5",
+      "order": 5,
+      "title": "Hand Tools, Power Tools & Jigs",
+      "ksbs": [
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "K14",
+        "K15",
+        "K16",
+        "K17"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Hand Tools, Power Tools & Jigs",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Hand Tools, Power Tools & Jigs",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S9",
+          "prompt": "Explain how your evidence for this assignment demonstrates S9.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S10",
+          "prompt": "Explain how your evidence for this assignment demonstrates S10.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S11",
+          "prompt": "Explain how your evidence for this assignment demonstrates S11.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S12",
+          "prompt": "Explain how your evidence for this assignment demonstrates S12.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K14",
+          "prompt": "Explain how your evidence for this assignment demonstrates K14.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K15",
+          "prompt": "Explain how your evidence for this assignment demonstrates K15.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K16",
+          "prompt": "Explain how your evidence for this assignment demonstrates K16.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K17",
+          "prompt": "Explain how your evidence for this assignment demonstrates K17.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a6",
+      "order": 6,
+      "title": "Communication, Teamwork & Wellbeing",
+      "ksbs": [
+        "S8",
+        "S13",
+        "K13",
+        "K18",
+        "K19",
+        "K20",
+        "B3",
+        "B5"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Communication, Teamwork & Wellbeing",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Communication, Teamwork & Wellbeing",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S8",
+          "prompt": "Explain how your evidence for this assignment demonstrates S8.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S13",
+          "prompt": "Explain how your evidence for this assignment demonstrates S13.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K13",
+          "prompt": "Explain how your evidence for this assignment demonstrates K13.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K18",
+          "prompt": "Explain how your evidence for this assignment demonstrates K18.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K19",
+          "prompt": "Explain how your evidence for this assignment demonstrates K19.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K20",
+          "prompt": "Explain how your evidence for this assignment demonstrates K20.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B3",
+          "prompt": "Explain how your evidence for this assignment demonstrates B3.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B5",
+          "prompt": "Explain how your evidence for this assignment demonstrates B5.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a7",
+      "order": 7,
+      "title": "Employment & Professional Development",
+      "ksbs": [
+        "K40",
+        "B4"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Employment & Professional Development",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Employment & Professional Development",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "K40",
+          "prompt": "Explain how your evidence for this assignment demonstrates K40.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B4",
+          "prompt": "Explain how your evidence for this assignment demonstrates B4.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+      "order": 8,
+      "title": "Site Carpentry Techniques & First Fix",
+      "ksbs": [
+        "K21",
+        "K22",
+        "K23",
+        "K27",
+        "S14",
+        "S15",
+        "S16"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Site Carpentry Techniques & First Fix",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Site Carpentry Techniques & First Fix",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "K21",
+          "prompt": "Explain how your evidence for this assignment demonstrates K21.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K22",
+          "prompt": "Explain how your evidence for this assignment demonstrates K22.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K23",
+          "prompt": "Explain how your evidence for this assignment demonstrates K23.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K27",
+          "prompt": "Explain how your evidence for this assignment demonstrates K27.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S14",
+          "prompt": "Explain how your evidence for this assignment demonstrates S14.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S15",
+          "prompt": "Explain how your evidence for this assignment demonstrates S15.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S16",
+          "prompt": "Explain how your evidence for this assignment demonstrates S16.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+      "order": 9,
+      "title": "Roof Installation (Trussed, Traditional & Flat)",
+      "ksbs": [
+        "K25",
+        "K26",
+        "S18"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Roof Installation (Trussed, Traditional & Flat)",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Roof Installation (Trussed, Traditional & Flat)",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "K25",
+          "prompt": "Explain how your evidence for this assignment demonstrates K25.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K26",
+          "prompt": "Explain how your evidence for this assignment demonstrates K26.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S18",
+          "prompt": "Explain how your evidence for this assignment demonstrates S18.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+      "order": 10,
+      "title": "Second Fix Site Carpentry",
+      "ksbs": [
+        "K28",
+        "S17"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Second Fix Site Carpentry",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Second Fix Site Carpentry",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "K28",
+          "prompt": "Explain how your evidence for this assignment demonstrates K28.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S17",
+          "prompt": "Explain how your evidence for this assignment demonstrates S17.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a11",
+      "order": 11,
+      "title": "Laser Levels, Connections & Cutting Techniques",
+      "ksbs": [
+        "K29",
+        "K24",
+        "S19",
+        "S20",
+        "S21",
+        "S22"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Laser Levels, Connections & Cutting Techniques",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Laser Levels, Connections & Cutting Techniques",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "K29",
+          "prompt": "Explain how your evidence for this assignment demonstrates K29.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K24",
+          "prompt": "Explain how your evidence for this assignment demonstrates K24.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S19",
+          "prompt": "Explain how your evidence for this assignment demonstrates S19.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S20",
+          "prompt": "Explain how your evidence for this assignment demonstrates S20.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S21",
+          "prompt": "Explain how your evidence for this assignment demonstrates S21.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S22",
+          "prompt": "Explain how your evidence for this assignment demonstrates S22.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-a12",
+      "order": 12,
+      "title": "Building Regulations Compliance for Site Carpentry",
+      "ksbs": [
+        "K7",
+        "K22",
+        "K23",
+        "K25",
+        "K26",
+        "K27",
+        "K28",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Building Regulations Compliance for Site Carpentry",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Building Regulations Compliance for Site Carpentry",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "K7",
+          "prompt": "Explain how your evidence for this assignment demonstrates K7.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K22",
+          "prompt": "Explain how your evidence for this assignment demonstrates K22.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K23",
+          "prompt": "Explain how your evidence for this assignment demonstrates K23.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K25",
+          "prompt": "Explain how your evidence for this assignment demonstrates K25.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K26",
+          "prompt": "Explain how your evidence for this assignment demonstrates K26.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K27",
+          "prompt": "Explain how your evidence for this assignment demonstrates K27.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K28",
+          "prompt": "Explain how your evidence for this assignment demonstrates K28.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S14",
+          "prompt": "Explain how your evidence for this assignment demonstrates S14.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S15",
+          "prompt": "Explain how your evidence for this assignment demonstrates S15.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S16",
+          "prompt": "Explain how your evidence for this assignment demonstrates S16.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S17",
+          "prompt": "Explain how your evidence for this assignment demonstrates S17.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S18",
+          "prompt": "Explain how your evidence for this assignment demonstrates S18.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    }
+  ],
+  "academy": {
+    "modules": [
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1",
+        "title": "Health, Safety & Site Environment",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a1",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K1?",
+            "options": [
+              "CoSHH, fire safety, Health and Safety at Work Act, asbestos awareness, manual handling,...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K1"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K2?",
+            "options": [
+              "Safety control equipment and how to use personal protective equipment (PPE), respirator...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K2"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K3?",
+            "options": [
+              "site inductions, toolbox talks, risk assessments, method statements and hazard identifi...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K3"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1-res1",
+            "title": "Health, Safety & Site Environment \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1-res2",
+            "title": "Health, Safety & Site Environment \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2",
+        "title": "Standards, Regulations & Sustainability",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a2",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K4?",
+            "options": [
+              "efficient use of resources, recycling, reuse, safe disposal of waste and sustainable fo...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K4"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K7?",
+            "options": [
+              "British standards, building regulations and warranty provider standards",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K7"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2-res1",
+            "title": "Standards, Regulations & Sustainability \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2-res2",
+            "title": "Standards, Regulations & Sustainability \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3",
+        "title": "Drawings, Digital Design & Building Principles",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a3",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K5?",
+            "options": [
+              "foundations, roofs, walls, damp proof courses, floors, utilities and services, internal...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K5"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K6?",
+            "options": [
+              "Basic principles of digital design and modelling systems",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K6"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K8?",
+            "options": [
+              "Methods of interpreting and extracting relevant information from drawings and specifica...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K8"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3-res1",
+            "title": "Drawings, Digital Design & Building Principles \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3-res2",
+            "title": "Drawings, Digital Design & Building Principles \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4",
+        "title": "Materials, Estimating & Cutting Lists",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a4",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K9?",
+            "options": [
+              "natural timber (hardwood/softwood), manufactured timber products (board, laminated timb...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K9"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K10?",
+            "options": [
+              "timber moisture content parameters, wet rot, dry rot and insect attack",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K10"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K11?",
+            "options": [
+              "mastics, preservatives, wood fillers, plastics and ironmongery",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K11"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4-res1",
+            "title": "Materials, Estimating & Cutting Lists \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4-res2",
+            "title": "Materials, Estimating & Cutting Lists \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5",
+        "title": "Hand Tools, Power Tools & Jigs",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a5",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K14?",
+            "options": [
+              "chisels, planes, hand saws, hammers, squares, tri-square, bevels, marking and mortise g...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K14"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K15?",
+            "options": [
+              "Hand tool maintenance and sharpening techniques",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K15"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K16?",
+            "options": [
+              "Jig production techniques",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K16"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5-res1",
+            "title": "Hand Tools, Power Tools & Jigs \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5-res2",
+            "title": "Hand Tools, Power Tools & Jigs \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6",
+        "title": "Communication, Teamwork & Wellbeing",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a6",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K13?",
+            "options": [
+              "Verbal communication techniques and construction terminology",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K13"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K18?",
+            "options": [
+              "Principles of good team working",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K18"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K19?",
+            "options": [
+              "Inclusion, equity and diversity in the workplace",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K19"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6-res1",
+            "title": "Communication, Teamwork & Wellbeing \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6-res2",
+            "title": "Communication, Teamwork & Wellbeing \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a7",
+        "title": "Employment & Professional Development",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a7",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a7-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K40?",
+            "options": [
+              "Employment types (self-employed and employed), small business start-up principles and tax",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K40"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a7-res1",
+            "title": "Employment & Professional Development \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a7",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a7-res2",
+            "title": "Employment & Professional Development \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a7",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "title": "Site Carpentry Techniques & First Fix",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K21?",
+            "options": [
+              "measuring, marking out, fitting, cutting (straight and angled) and mitring",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K21"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K22?",
+            "options": [
+              "structural fixtures and timber sizing in site carpentry, how to use sizing tables",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K22"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K23?",
+            "options": [
+              "timber sizing tables purpose and use",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K23"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8-res1",
+            "title": "Site Carpentry Techniques & First Fix \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8-res2",
+            "title": "Site Carpentry Techniques & First Fix \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+        "title": "Roof Installation (Trussed, Traditional & Flat)",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K25?",
+            "options": [
+              "basic rafter trussed (prefabricated) and traditional cut roof (built on site)",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K25"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K26?",
+            "options": [
+              "warm and cold flat roofs including firings and coverings",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K26"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9-res1",
+            "title": "Roof Installation (Trussed, Traditional & Flat) \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9-res2",
+            "title": "Roof Installation (Trussed, Traditional & Flat) \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+        "title": "Second Fix Site Carpentry",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a10-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K28?",
+            "options": [
+              "service encasement, cladding, wall and floor units and fitments, handrails and spindles...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K28"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a10-res1",
+            "title": "Second Fix Site Carpentry \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a10-res2",
+            "title": "Second Fix Site Carpentry \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11",
+        "title": "Laser Levels, Connections & Cutting Techniques",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a11",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K29?",
+            "options": [
+              "types, use, calibration and storage of laser levels",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K29"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K24?",
+            "options": [
+              "timber splicing and scribing techniques",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K24"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11-res1",
+            "title": "Laser Levels, Connections & Cutting Techniques \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11-res2",
+            "title": "Laser Levels, Connections & Cutting Techniques \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12",
+        "title": "Building Regulations Compliance for Site Carpentry",
+        "linkedAssignmentId": "carpentry-joinery-site-carpenter-st0264-v1-4-a12",
+        "quiz": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K7?",
+            "options": [
+              "British standards, building regulations and warranty provider standards",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K7"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K22?",
+            "options": [
+              "structural fixtures and timber sizing in site carpentry, how to use sizing tables",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K22"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K23?",
+            "options": [
+              "timber sizing tables purpose and use",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K23"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12-res1",
+            "title": "Building Regulations Compliance for Site Carpentry \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12-res2",
+            "title": "Building Regulations Compliance for Site Carpentry \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      }
+    ]
+  },
+  "practicalAssessments": [
+    {
+      "id": "carpentry-joinery-site-carpenter-st0264-v1-4-pa1",
+      "title": "Carpentry and Joinery (Site Carpenter pathway) \u2014 Practical Skills Assessment",
+      "description": "Observed practical assessment covering core hands-on skills for this standard. Configure specific tasks and pass criteria before publishing.",
+      "linkedKsbs": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22"
+      ],
+      "generated": true
+    }
+  ],
+  "ksbMatrix": {
+    "K1": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ]
+    },
+    "K2": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ]
+    },
+    "K3": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ]
+    },
+    "K4": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a2"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2"
+      ]
+    },
+    "K5": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a3"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3"
+      ]
+    },
+    "K6": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a3"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3"
+      ]
+    },
+    "K7": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a2",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "K8": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a3"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3"
+      ]
+    },
+    "K9": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ]
+    },
+    "K10": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ]
+    },
+    "K11": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ]
+    },
+    "K12": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ]
+    },
+    "K13": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ]
+    },
+    "K14": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ]
+    },
+    "K15": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ]
+    },
+    "K16": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ]
+    },
+    "K17": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ]
+    },
+    "K18": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ]
+    },
+    "K19": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ]
+    },
+    "K20": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ]
+    },
+    "K40": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a7"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a7"
+      ]
+    },
+    "K21": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a8"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8"
+      ]
+    },
+    "K22": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "K23": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "K24": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ]
+    },
+    "K25": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "K26": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "K27": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "K28": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "K29": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ]
+    },
+    "S1": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ]
+    },
+    "S2": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ]
+    },
+    "S3": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a2"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2"
+      ]
+    },
+    "S4": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a2"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2"
+      ]
+    },
+    "S5": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ]
+    },
+    "S6": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a3"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3"
+      ]
+    },
+    "S7": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4"
+      ]
+    },
+    "S8": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ]
+    },
+    "S9": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ]
+    },
+    "S10": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ]
+    },
+    "S11": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ]
+    },
+    "S12": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5"
+      ]
+    },
+    "S13": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ]
+    },
+    "S14": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "S15": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "S16": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "S17": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "S18": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+      ]
+    },
+    "S19": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ]
+    },
+    "S20": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ]
+    },
+    "S21": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ]
+    },
+    "S22": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11"
+      ]
+    },
+    "B1": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1"
+      ]
+    },
+    "B2": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a2"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2"
+      ]
+    },
+    "B3": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ]
+    },
+    "B4": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a7"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a7"
+      ]
+    },
+    "B5": {
+      "assignments": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ],
+      "academyModules": [
+        "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6"
+      ]
+    }
+  },
+  "gatewayReadiness": {
+    "requiredAssignments": [
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a1",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a2",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a3",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a4",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a5",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a6",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a7",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a11",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+    ],
+    "requiredAcademyModules": [
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a1",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a2",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a3",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a4",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a5",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a6",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a7",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a8",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a9",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a10",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a11",
+      "carpentry-joinery-site-carpenter-st0264-v1-4-mod-carpentry-joinery-site-carpenter-st0264-v1-4-a12"
+    ],
+    "requiredPracticalAssessments": [
+      "carpentry-joinery-site-carpenter-st0264-v1-4-pa1"
+    ]
+  }
+}

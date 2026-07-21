@@ -1,0 +1,2338 @@
+{
+  "courseId": "bricklayer-st0095-v1-2",
+  "title": "Bricklayer",
+  "standardCode": "ST0095",
+  "version": "1.2",
+  "level": 2,
+  "pathway": null,
+  "route": "Construction and the built environment",
+  "typicalDurationMonths": 30,
+  "source": "Institute for Apprenticeships and Technical Education / Skills England published standard",
+  "ksbs": {
+    "knowledge": [
+      {
+        "code": "K1",
+        "text": "Awareness of health and safety regulations, standards, and guidance and impact on role. CoSHH, fire safety, Health and Safety at Work Act, asbestos awareness, manual handling, signage, fire extinguishers, situational awareness, slips/trips/falls, confined spaces, working at height, electrical safety, RPE, dust suppression."
+      },
+      {
+        "code": "K2",
+        "text": "Safety control equipment and how to use personal protective equipment (PPE)."
+      },
+      {
+        "code": "K3",
+        "text": "Safe systems of work: site inductions, toolbox talks, risk assessments, method statements and hazard identification in the work area."
+      },
+      {
+        "code": "K4",
+        "text": "Impact of the sector on the environment: efficient use of resources, recycling, reuse, surface water contamination and safe disposal of waste."
+      },
+      {
+        "code": "K5",
+        "text": "The importance and considerations of the environment and sustainability: thermal qualities, airtightness and ventilation in buildings."
+      },
+      {
+        "code": "K6",
+        "text": "Principles of building: foundations, roofs, walls, cavity step trays, floors, utilities and services, insulation, fire, moisture and air protection, damp proof courses, brick ties and quality of materials."
+      },
+      {
+        "code": "K7",
+        "text": "Standards and regulations associated with bricklaying activities: British standards, building regulations and warranty provider standards."
+      },
+      {
+        "code": "K8",
+        "text": "Materials and their characteristics: bricks and blocks, efflorescence, mortar, damp proof courses (DPC), wall ties, plasticisers, concrete and steel lintels, RSJ, fire stopping, insulation, cement and building sand."
+      },
+      {
+        "code": "K9",
+        "text": "Modern methods of construction: rapid build technology, precast components, corner profiles, alternative frame and cladding systems, masonry support systems."
+      },
+      {
+        "code": "K10",
+        "text": "Methods of interpreting and extracting relevant information from drawings and specifications."
+      },
+      {
+        "code": "K11",
+        "text": "Basic principles of digital design and modelling systems."
+      },
+      {
+        "code": "K12",
+        "text": "Simple resource estimation techniques: quantity of bricks and blocks, amount of mortar, quantity of wall ties, DPCs, cavity trays and lintels."
+      },
+      {
+        "code": "K13",
+        "text": "Hand tool use, maintenance and storage: levels, measures, hammers, bolsters, brick hammers, trowels, brick jointer, line blocks and pins, scutch, chariot and brick clamps."
+      },
+      {
+        "code": "K14",
+        "text": "Power tool use and limitations: disc cutters, mixers and drills."
+      },
+      {
+        "code": "K15",
+        "text": "Bond types: English bond, Flemish bond, garden wall bonds and broken bond."
+      },
+      {
+        "code": "K16",
+        "text": "Brick solid wall setting out, construction and capping methods."
+      },
+      {
+        "code": "K17",
+        "text": "Joint finishes: half round, flush, weather struck and recessed."
+      },
+      {
+        "code": "K18",
+        "text": "Principles of basic decorative walling and piers: projecting and contrasting brick, isolated and attached pier, banding."
+      },
+      {
+        "code": "K19",
+        "text": "Principles of the use of expansion joints."
+      },
+      {
+        "code": "K20",
+        "text": "Mixing mortar: ratios, silos, pre-mixed, gauging, hand mixing and mechanical mixing."
+      },
+      {
+        "code": "K21",
+        "text": "Cavity wall setting out techniques: bricks and blocks, openings and levels, use of profiles, gauge rods and squares."
+      },
+      {
+        "code": "K22",
+        "text": "Cavity wall construction using stretcher bond brick and block walling, forming openings, closing cavities, selection and placement of wall ties, insulation, DPCs, cavity trays, weep holes, lintels and fire stopping."
+      },
+      {
+        "code": "K23",
+        "text": "Brick on edge and soldier courses: setting out and construction techniques."
+      },
+      {
+        "code": "K24",
+        "text": "Defects and repair: construction defects and repair methods."
+      },
+      {
+        "code": "K25",
+        "text": "Methods of protecting materials and work: frost, water and construction damage."
+      },
+      {
+        "code": "K26",
+        "text": "Verbal communication techniques and construction terminology."
+      },
+      {
+        "code": "K27",
+        "text": "Principles of good team working."
+      },
+      {
+        "code": "K28",
+        "text": "Inclusion, equity and diversity in the workplace."
+      },
+      {
+        "code": "K29",
+        "text": "Methods of cutting bricks and blocks using hand tools."
+      },
+      {
+        "code": "K30",
+        "text": "Brick walls with raking cut: setting out and construction techniques."
+      },
+      {
+        "code": "K31",
+        "text": "Well-being: mental and physical health considerations in self and others and how to access support."
+      }
+    ],
+    "skills": [
+      {
+        "code": "S1",
+        "text": "Comply with health and safety regulations, standards, and guidance."
+      },
+      {
+        "code": "S2",
+        "text": "Identify and use personal protective equipment (PPE)."
+      },
+      {
+        "code": "S3",
+        "text": "Comply with environmental and sustainability regulations, standards, and guidance. Segregate resources for reuse, recycling and disposal."
+      },
+      {
+        "code": "S4",
+        "text": "Comply with industry regulations, standards, and guidance."
+      },
+      {
+        "code": "S5",
+        "text": "Read and interpret information from drawings and specifications."
+      },
+      {
+        "code": "S6",
+        "text": "Estimate and select required resources, for example the quantity of bricks and blocks, mortar, wall ties and insulation."
+      },
+      {
+        "code": "S7",
+        "text": "Prepare and maintain a safe working area."
+      },
+      {
+        "code": "S8",
+        "text": "Select and use hand tools."
+      },
+      {
+        "code": "S9",
+        "text": "Maintain and store hand tools."
+      },
+      {
+        "code": "S10",
+        "text": "Set out brick and block cavity wall to given tolerances, including an opening."
+      },
+      {
+        "code": "S11",
+        "text": "Construct a stretcher bond brick and block cavity wall with return and opening to given tolerances, including installing a lintel with soldiers, brick and edge sill, closure around opening, insulation, fire stopping, cavity tray, DPC and weep holes."
+      },
+      {
+        "code": "S12",
+        "text": "Apply joint finishes, for example half round, flush, weather struck and recessed."
+      },
+      {
+        "code": "S13",
+        "text": "Set out and construct a simple brick solid wall with capping."
+      },
+      {
+        "code": "S14",
+        "text": "Gauge and hand mix mortar to ratio."
+      },
+      {
+        "code": "S15",
+        "text": "Measure and cut bricks and blocks using hand tools, to given tolerances."
+      },
+      {
+        "code": "S16",
+        "text": "Carry out a simple repair, for example replacing damaged bricks."
+      },
+      {
+        "code": "S17",
+        "text": "Protect materials and finished work."
+      },
+      {
+        "code": "S18",
+        "text": "Verbally communicate with others, applying construction terminology."
+      },
+      {
+        "code": "S19",
+        "text": "Follow equity, diversity and inclusion guidance."
+      },
+      {
+        "code": "S20",
+        "text": "Applies team working principles to their own and the wider build team."
+      },
+      {
+        "code": "S21",
+        "text": "Identifies well-being support available to self and others."
+      },
+      {
+        "code": "S22",
+        "text": "Construct a brick wall with raking cut, for example a gable end wall or garden wall with raking cut."
+      }
+    ],
+    "behaviours": [
+      {
+        "code": "B1",
+        "text": "Put health, safety and wellbeing first."
+      },
+      {
+        "code": "B2",
+        "text": "Consider the environment when using resources and carrying out processes."
+      },
+      {
+        "code": "B3",
+        "text": "Take ownership of given work."
+      },
+      {
+        "code": "B4",
+        "text": "Contribute to an inclusive and diverse culture."
+      },
+      {
+        "code": "B5",
+        "text": "Seek learning and development opportunities."
+      },
+      {
+        "code": "B6",
+        "text": "Team-focus to meet team goals including, considering the wider build team."
+      }
+    ]
+  },
+  "assignments": [
+    {
+      "id": "bricklayer-st0095-v1-2-a1",
+      "order": 1,
+      "title": "Health & Safety",
+      "ksbs": [
+        "S1",
+        "S2",
+        "K1",
+        "K2",
+        "K3",
+        "B1"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Health & Safety",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Health & Safety",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S1",
+          "prompt": "Explain how your evidence for this assignment demonstrates S1.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S2",
+          "prompt": "Explain how your evidence for this assignment demonstrates S2.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K1",
+          "prompt": "Explain how your evidence for this assignment demonstrates K1.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K2",
+          "prompt": "Explain how your evidence for this assignment demonstrates K2.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K3",
+          "prompt": "Explain how your evidence for this assignment demonstrates K3.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B1",
+          "prompt": "Explain how your evidence for this assignment demonstrates B1.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a2",
+      "order": 2,
+      "title": "Standards, Regulations & Sustainability",
+      "ksbs": [
+        "S3",
+        "S4",
+        "K4",
+        "K5",
+        "K7",
+        "B2"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Standards, Regulations & Sustainability",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Standards, Regulations & Sustainability",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S3",
+          "prompt": "Explain how your evidence for this assignment demonstrates S3.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S4",
+          "prompt": "Explain how your evidence for this assignment demonstrates S4.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K4",
+          "prompt": "Explain how your evidence for this assignment demonstrates K4.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K5",
+          "prompt": "Explain how your evidence for this assignment demonstrates K5.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K7",
+          "prompt": "Explain how your evidence for this assignment demonstrates K7.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B2",
+          "prompt": "Explain how your evidence for this assignment demonstrates B2.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a3",
+      "order": 3,
+      "title": "Preparation & Drawings",
+      "ksbs": [
+        "S5",
+        "S7",
+        "K10",
+        "K9",
+        "K11"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Preparation & Drawings",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Preparation & Drawings",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S5",
+          "prompt": "Explain how your evidence for this assignment demonstrates S5.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S7",
+          "prompt": "Explain how your evidence for this assignment demonstrates S7.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K10",
+          "prompt": "Explain how your evidence for this assignment demonstrates K10.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K9",
+          "prompt": "Explain how your evidence for this assignment demonstrates K9.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K11",
+          "prompt": "Explain how your evidence for this assignment demonstrates K11.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a4",
+      "order": 4,
+      "title": "Estimates & Materials",
+      "ksbs": [
+        "S6",
+        "K8",
+        "K6",
+        "K12"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Estimates & Materials",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Estimates & Materials",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S6",
+          "prompt": "Explain how your evidence for this assignment demonstrates S6.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K8",
+          "prompt": "Explain how your evidence for this assignment demonstrates K8.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K6",
+          "prompt": "Explain how your evidence for this assignment demonstrates K6.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K12",
+          "prompt": "Explain how your evidence for this assignment demonstrates K12.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a5",
+      "order": 5,
+      "title": "Tools & Equipment",
+      "ksbs": [
+        "S8",
+        "S9",
+        "K13",
+        "K14",
+        "B1"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Tools & Equipment",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Tools & Equipment",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S8",
+          "prompt": "Explain how your evidence for this assignment demonstrates S8.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S9",
+          "prompt": "Explain how your evidence for this assignment demonstrates S9.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K13",
+          "prompt": "Explain how your evidence for this assignment demonstrates K13.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K14",
+          "prompt": "Explain how your evidence for this assignment demonstrates K14.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B1",
+          "prompt": "Explain how your evidence for this assignment demonstrates B1.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a6",
+      "order": 6,
+      "title": "Cavity Walling",
+      "ksbs": [
+        "S10",
+        "S11",
+        "K21",
+        "K22",
+        "B3"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Cavity Walling",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Cavity Walling",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S10",
+          "prompt": "Explain how your evidence for this assignment demonstrates S10.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S11",
+          "prompt": "Explain how your evidence for this assignment demonstrates S11.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K21",
+          "prompt": "Explain how your evidence for this assignment demonstrates K21.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K22",
+          "prompt": "Explain how your evidence for this assignment demonstrates K22.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B3",
+          "prompt": "Explain how your evidence for this assignment demonstrates B3.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a7",
+      "order": 7,
+      "title": "Jointing & Mixing Mortar",
+      "ksbs": [
+        "S12",
+        "S14",
+        "K17",
+        "K19",
+        "K20"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Jointing & Mixing Mortar",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Jointing & Mixing Mortar",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S12",
+          "prompt": "Explain how your evidence for this assignment demonstrates S12.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S14",
+          "prompt": "Explain how your evidence for this assignment demonstrates S14.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K17",
+          "prompt": "Explain how your evidence for this assignment demonstrates K17.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K19",
+          "prompt": "Explain how your evidence for this assignment demonstrates K19.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K20",
+          "prompt": "Explain how your evidence for this assignment demonstrates K20.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a8",
+      "order": 8,
+      "title": "Solid Walling",
+      "ksbs": [
+        "S13",
+        "K15",
+        "K16",
+        "K18",
+        "K23"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Solid Walling",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Solid Walling",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S13",
+          "prompt": "Explain how your evidence for this assignment demonstrates S13.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K15",
+          "prompt": "Explain how your evidence for this assignment demonstrates K15.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K16",
+          "prompt": "Explain how your evidence for this assignment demonstrates K16.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K18",
+          "prompt": "Explain how your evidence for this assignment demonstrates K18.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K23",
+          "prompt": "Explain how your evidence for this assignment demonstrates K23.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a9",
+      "order": 9,
+      "title": "Repair & Protection",
+      "ksbs": [
+        "S16",
+        "S17",
+        "K24",
+        "K25",
+        "B3"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Repair & Protection",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Repair & Protection",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S16",
+          "prompt": "Explain how your evidence for this assignment demonstrates S16.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S17",
+          "prompt": "Explain how your evidence for this assignment demonstrates S17.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K24",
+          "prompt": "Explain how your evidence for this assignment demonstrates K24.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K25",
+          "prompt": "Explain how your evidence for this assignment demonstrates K25.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B3",
+          "prompt": "Explain how your evidence for this assignment demonstrates B3.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a10",
+      "order": 10,
+      "title": "Communication & Teamwork",
+      "ksbs": [
+        "S18",
+        "S20",
+        "K26",
+        "K27",
+        "B6",
+        "B5"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Communication & Teamwork",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Communication & Teamwork",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S18",
+          "prompt": "Explain how your evidence for this assignment demonstrates S18.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S20",
+          "prompt": "Explain how your evidence for this assignment demonstrates S20.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K26",
+          "prompt": "Explain how your evidence for this assignment demonstrates K26.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K27",
+          "prompt": "Explain how your evidence for this assignment demonstrates K27.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B6",
+          "prompt": "Explain how your evidence for this assignment demonstrates B6.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B5",
+          "prompt": "Explain how your evidence for this assignment demonstrates B5.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a11",
+      "order": 11,
+      "title": "EDI & Wellbeing",
+      "ksbs": [
+        "S19",
+        "S21",
+        "K28",
+        "K31",
+        "B4"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: EDI & Wellbeing",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: EDI & Wellbeing",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S19",
+          "prompt": "Explain how your evidence for this assignment demonstrates S19.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S21",
+          "prompt": "Explain how your evidence for this assignment demonstrates S21.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K28",
+          "prompt": "Explain how your evidence for this assignment demonstrates K28.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K31",
+          "prompt": "Explain how your evidence for this assignment demonstrates K31.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B4",
+          "prompt": "Explain how your evidence for this assignment demonstrates B4.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    },
+    {
+      "id": "bricklayer-st0095-v1-2-a12",
+      "order": 12,
+      "title": "Raked Walling & Cutting",
+      "ksbs": [
+        "S22",
+        "S15",
+        "K30",
+        "K29",
+        "B2"
+      ],
+      "activities": [
+        {
+          "type": "photo_evidence",
+          "prompt": "Upload photographic evidence of work relating to: Raked Walling & Cutting",
+          "minPhotos": 1
+        },
+        {
+          "type": "activity_statement",
+          "prompt": "Describe, in your own words, the activity you carried out for: Raked Walling & Cutting",
+          "minWords": 150
+        },
+        {
+          "type": "question",
+          "ksbCode": "S22",
+          "prompt": "Explain how your evidence for this assignment demonstrates S22.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "S15",
+          "prompt": "Explain how your evidence for this assignment demonstrates S15.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K30",
+          "prompt": "Explain how your evidence for this assignment demonstrates K30.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "K29",
+          "prompt": "Explain how your evidence for this assignment demonstrates K29.",
+          "responseType": "text"
+        },
+        {
+          "type": "question",
+          "ksbCode": "B2",
+          "prompt": "Explain how your evidence for this assignment demonstrates B2.",
+          "responseType": "text"
+        }
+      ],
+      "exportable": true,
+      "exportFormat": "pdf"
+    }
+  ],
+  "academy": {
+    "modules": [
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1",
+        "title": "Health & Safety",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a1",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K1?",
+            "options": [
+              "Awareness of health and safety regulations, standards, and guidance and impact on role",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K1"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K2?",
+            "options": [
+              "Safety control equipment and how to use personal protective equipment (PPE)",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K2"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K3?",
+            "options": [
+              "site inductions, toolbox talks, risk assessments, method statements and hazard identifi...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K3"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1-res1",
+            "title": "Health & Safety \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1-res2",
+            "title": "Health & Safety \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2",
+        "title": "Standards, Regulations & Sustainability",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a2",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K4?",
+            "options": [
+              "efficient use of resources, recycling, reuse, surface water contamination and safe disp...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K4"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K5?",
+            "options": [
+              "thermal qualities, airtightness and ventilation in buildings",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K5"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K7?",
+            "options": [
+              "British standards, building regulations and warranty provider standards",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K7"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2-res1",
+            "title": "Standards, Regulations & Sustainability \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2-res2",
+            "title": "Standards, Regulations & Sustainability \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3",
+        "title": "Preparation & Drawings",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a3",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K10?",
+            "options": [
+              "Methods of interpreting and extracting relevant information from drawings and specifica...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K10"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K9?",
+            "options": [
+              "rapid build technology, precast components, corner profiles, alternative frame and clad...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K9"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K11?",
+            "options": [
+              "Basic principles of digital design and modelling systems",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K11"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3-res1",
+            "title": "Preparation & Drawings \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3-res2",
+            "title": "Preparation & Drawings \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4",
+        "title": "Estimates & Materials",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a4",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K8?",
+            "options": [
+              "bricks and blocks, efflorescence, mortar, damp proof courses (DPC), wall ties, plastici...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K8"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K6?",
+            "options": [
+              "foundations, roofs, walls, cavity step trays, floors, utilities and services, insulatio...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K6"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K12?",
+            "options": [
+              "quantity of bricks and blocks, amount of mortar, quantity of wall ties, DPCs, cavity tr...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K12"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4-res1",
+            "title": "Estimates & Materials \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4-res2",
+            "title": "Estimates & Materials \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5",
+        "title": "Tools & Equipment",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a5",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K13?",
+            "options": [
+              "levels, measures, hammers, bolsters, brick hammers, trowels, brick jointer, line blocks...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K13"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K14?",
+            "options": [
+              "disc cutters, mixers and drills",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K14"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5-res1",
+            "title": "Tools & Equipment \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5-res2",
+            "title": "Tools & Equipment \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6",
+        "title": "Cavity Walling",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a6",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K21?",
+            "options": [
+              "bricks and blocks, openings and levels, use of profiles, gauge rods and squares",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K21"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K22?",
+            "options": [
+              "Cavity wall construction using stretcher bond brick and block walling, forming openings...",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K22"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6-res1",
+            "title": "Cavity Walling \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6-res2",
+            "title": "Cavity Walling \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7",
+        "title": "Jointing & Mixing Mortar",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a7",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K17?",
+            "options": [
+              "half round, flush, weather struck and recessed",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K17"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K19?",
+            "options": [
+              "Principles of the use of expansion joints",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K19"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K20?",
+            "options": [
+              "ratios, silos, pre-mixed, gauging, hand mixing and mechanical mixing",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K20"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7-res1",
+            "title": "Jointing & Mixing Mortar \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7-res2",
+            "title": "Jointing & Mixing Mortar \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8",
+        "title": "Solid Walling",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a8",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K15?",
+            "options": [
+              "English bond, Flemish bond, garden wall bonds and broken bond",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K15"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K16?",
+            "options": [
+              "Brick solid wall setting out, construction and capping methods",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K16"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8-q3",
+            "type": "multiple_choice",
+            "stem": "Which best describes K18?",
+            "options": [
+              "projecting and contrasting brick, isolated and attached pier, banding",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K18"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8-res1",
+            "title": "Solid Walling \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8-res2",
+            "title": "Solid Walling \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9",
+        "title": "Repair & Protection",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a9",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K24?",
+            "options": [
+              "construction defects and repair methods",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K24"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K25?",
+            "options": [
+              "frost, water and construction damage",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K25"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9-res1",
+            "title": "Repair & Protection \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9-res2",
+            "title": "Repair & Protection \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10",
+        "title": "Communication & Teamwork",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a10",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K26?",
+            "options": [
+              "Verbal communication techniques and construction terminology",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K26"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K27?",
+            "options": [
+              "Principles of good team working",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K27"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10-res1",
+            "title": "Communication & Teamwork \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10-res2",
+            "title": "Communication & Teamwork \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11",
+        "title": "EDI & Wellbeing",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a11",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K28?",
+            "options": [
+              "Inclusion, equity and diversity in the workplace",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K28"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K31?",
+            "options": [
+              "mental and physical health considerations in self and others and how to access support",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K31"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11-res1",
+            "title": "EDI & Wellbeing \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11-res2",
+            "title": "EDI & Wellbeing \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      },
+      {
+        "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12",
+        "title": "Raked Walling & Cutting",
+        "linkedAssignmentId": "bricklayer-st0095-v1-2-a12",
+        "quiz": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12-q1",
+            "type": "multiple_choice",
+            "stem": "Which best describes K30?",
+            "options": [
+              "setting out and construction techniques",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K30"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12-q2",
+            "type": "multiple_choice",
+            "stem": "Which best describes K29?",
+            "options": [
+              "Methods of cutting bricks and blocks using hand tools",
+              "A method only used in domestic extensions",
+              "A regulation that applies solely to electrical contractors",
+              "An optional guideline apprentices may disregard on site"
+            ],
+            "correctIndex": 0,
+            "linkedKsbs": [
+              "K29"
+            ],
+            "generated": true,
+            "note": "Draft question auto-generated from KSB text \u2014 review/replace before publishing."
+          }
+        ],
+        "resources": [
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12-res1",
+            "title": "Raked Walling & Cutting \u2014 video walkthrough",
+            "type": "video",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          },
+          {
+            "id": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12-res2",
+            "title": "Raked Walling & Cutting \u2014 reference guide (PDF)",
+            "type": "pdf",
+            "url": "",
+            "linkedModule": "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12",
+            "generated": true,
+            "note": "Placeholder resource \u2014 add a real URL/file before publishing."
+          }
+        ],
+        "certificateOnCompletion": true
+      }
+    ]
+  },
+  "practicalAssessments": [
+    {
+      "id": "bricklayer-st0095-v1-2-pa1",
+      "title": "Bricklayer \u2014 Practical Skills Assessment",
+      "description": "Observed practical assessment covering core hands-on skills for this standard. Configure specific tasks and pass criteria before publishing.",
+      "linkedKsbs": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22"
+      ],
+      "generated": true
+    }
+  ],
+  "ksbMatrix": {
+    "K1": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a1"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1"
+      ]
+    },
+    "K2": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a1"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1"
+      ]
+    },
+    "K3": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a1"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1"
+      ]
+    },
+    "K4": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a2"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2"
+      ]
+    },
+    "K5": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a2"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2"
+      ]
+    },
+    "K6": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a4"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4"
+      ]
+    },
+    "K7": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a2"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2"
+      ]
+    },
+    "K8": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a4"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4"
+      ]
+    },
+    "K9": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a3"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3"
+      ]
+    },
+    "K10": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a3"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3"
+      ]
+    },
+    "K11": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a3"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3"
+      ]
+    },
+    "K12": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a4"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4"
+      ]
+    },
+    "K13": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a5"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5"
+      ]
+    },
+    "K14": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a5"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5"
+      ]
+    },
+    "K15": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a8"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8"
+      ]
+    },
+    "K16": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a8"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8"
+      ]
+    },
+    "K17": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a7"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7"
+      ]
+    },
+    "K18": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a8"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8"
+      ]
+    },
+    "K19": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a7"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7"
+      ]
+    },
+    "K20": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a7"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7"
+      ]
+    },
+    "K21": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a6"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6"
+      ]
+    },
+    "K22": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a6"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6"
+      ]
+    },
+    "K23": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a8"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8"
+      ]
+    },
+    "K24": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a9"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9"
+      ]
+    },
+    "K25": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a9"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9"
+      ]
+    },
+    "K26": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a10"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10"
+      ]
+    },
+    "K27": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a10"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10"
+      ]
+    },
+    "K28": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a11"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11"
+      ]
+    },
+    "K29": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a12"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12"
+      ]
+    },
+    "K30": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a12"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12"
+      ]
+    },
+    "K31": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a11"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11"
+      ]
+    },
+    "S1": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a1"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1"
+      ]
+    },
+    "S2": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a1"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1"
+      ]
+    },
+    "S3": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a2"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2"
+      ]
+    },
+    "S4": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a2"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2"
+      ]
+    },
+    "S5": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a3"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3"
+      ]
+    },
+    "S6": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a4"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4"
+      ]
+    },
+    "S7": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a3"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3"
+      ]
+    },
+    "S8": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a5"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5"
+      ]
+    },
+    "S9": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a5"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5"
+      ]
+    },
+    "S10": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a6"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6"
+      ]
+    },
+    "S11": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a6"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6"
+      ]
+    },
+    "S12": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a7"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7"
+      ]
+    },
+    "S13": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a8"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8"
+      ]
+    },
+    "S14": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a7"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7"
+      ]
+    },
+    "S15": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a12"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12"
+      ]
+    },
+    "S16": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a9"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9"
+      ]
+    },
+    "S17": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a9"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9"
+      ]
+    },
+    "S18": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a10"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10"
+      ]
+    },
+    "S19": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a11"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11"
+      ]
+    },
+    "S20": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a10"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10"
+      ]
+    },
+    "S21": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a11"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11"
+      ]
+    },
+    "S22": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a12"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12"
+      ]
+    },
+    "B1": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a1",
+        "bricklayer-st0095-v1-2-a5"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1",
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5"
+      ]
+    },
+    "B2": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a2",
+        "bricklayer-st0095-v1-2-a12"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2",
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12"
+      ]
+    },
+    "B3": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a6",
+        "bricklayer-st0095-v1-2-a9"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6",
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9"
+      ]
+    },
+    "B4": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a11"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11"
+      ]
+    },
+    "B5": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a10"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10"
+      ]
+    },
+    "B6": {
+      "assignments": [
+        "bricklayer-st0095-v1-2-a10"
+      ],
+      "academyModules": [
+        "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10"
+      ]
+    }
+  },
+  "gatewayReadiness": {
+    "requiredAssignments": [
+      "bricklayer-st0095-v1-2-a1",
+      "bricklayer-st0095-v1-2-a2",
+      "bricklayer-st0095-v1-2-a3",
+      "bricklayer-st0095-v1-2-a4",
+      "bricklayer-st0095-v1-2-a5",
+      "bricklayer-st0095-v1-2-a6",
+      "bricklayer-st0095-v1-2-a7",
+      "bricklayer-st0095-v1-2-a8",
+      "bricklayer-st0095-v1-2-a9",
+      "bricklayer-st0095-v1-2-a10",
+      "bricklayer-st0095-v1-2-a11",
+      "bricklayer-st0095-v1-2-a12"
+    ],
+    "requiredAcademyModules": [
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a1",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a2",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a3",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a4",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a5",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a6",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a7",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a8",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a9",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a10",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a11",
+      "bricklayer-st0095-v1-2-mod-bricklayer-st0095-v1-2-a12"
+    ],
+    "requiredPracticalAssessments": [
+      "bricklayer-st0095-v1-2-pa1"
+    ]
+  }
+}

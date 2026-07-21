@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Apprentice+",
+    "slug": "apprentice-plus",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#0F1C2E"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.apprenticeplus.app"
+    },
+    "android": {
+      "package": "com.apprenticeplus.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0F1C2E"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
