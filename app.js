@@ -1,10 +1,10 @@
 
 const $=(s,p=document)=>p.querySelector(s), $$=(s,p=document)=>[...p.querySelectorAll(s)];
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set(k,v){localStorage.setItem(k,JSON.stringify(v))}};
-let state=store.get('applus-state',{name:'Apprentice',courseId:'brick',xp:0,completed:{},drafts:{},rewards:[],academyPassed:{},academyScores:{},witnessTestimonies:{},tab:'home'});
-state.academyPassed=state.academyPassed||{}; state.academyScores=state.academyScores||{}; state.witnessTestimonies=state.witnessTestimonies||{};
+let state=store.get('applus-state',{name:'Apprentice',signature:'',courseId:'brick',xp:0,completed:{},drafts:{},rewards:[],academyPassed:{},academyScores:{},academyCompletionDates:{},witnessTestimonies:{},tab:'home'});
+state.signature=state.signature||''; state.academyPassed=state.academyPassed||{}; state.academyScores=state.academyScores||{}; state.academyCompletionDates=state.academyCompletionDates||{}; state.witnessTestimonies=state.witnessTestimonies||{};
 let view={tab:state.tab||'home',courseId:state.courseId||'brick',assignment:null,academyModule:null,witnessAssignment:null,apprenticeshipTab:state.apprenticeshipTab||'assignments'};
-const APP_VERSION='2.0';
+const APP_VERSION='2.1';
 let deferredInstallPrompt=null;
 let swRegistration=null;
 let refreshingForUpdate=false;
@@ -116,7 +116,7 @@ function renderAcademyModule(){
   const qs=academyQuestions(m),passed=!!state.academyPassed[m.id];
   shell('Academy',`<button class="back" id="backAcademy">‹ Back to Academy</button><div class="card academy-topic"><span class="academy-ksb">${esc(m.code)}</span><h2>Assignment ${m.assignmentNumber}: ${esc(m.title)}</h2><p class="muted">Mapped KSBs: ${m.ksbs.map(esc).join(', ')}. Passing this assignment-specific quiz adds Academy supporting evidence. The related KSB can only complete when the matching assignment is also complete.</p></div><form class="card academy-quiz" id="academyQuiz"><h2>10-question assessment</h2><p class="muted">All questions relate to this assignment and its mapped KSBs. Score at least 80% to pass.</p>${qs.map((q,qi)=>`<fieldset><legend>${qi+1}. ${esc(q.q)} <small class="muted">${esc(q.ksb)}</small></legend>${q.options.map((o,oi)=>`<label><input type="radio" name="q${qi}" value="${oi}"> <span>${esc(o)}</span></label>`).join('')}</fieldset>`).join('')}<button class="btn btn-primary" type="submit">${passed?'Retake quiz':'Submit answers'}</button><div class="quiz-result" id="quizResult">${passed?`Previously passed${state.academyScores[m.id]!=null?` with ${state.academyScores[m.id]}%`:''}.`:''}</div></form>`);
   $('#backAcademy').onclick=()=>{view.academyModule=null;render()};
-  $('#academyQuiz').onsubmit=e=>{e.preventDefault();let correct=0,answered=0;qs.forEach((q,i)=>{const picked=$(`input[name="q${i}"]:checked`);if(picked){answered++;if(Number(picked.value)===q.answer)correct++}});if(answered<qs.length){$('#quizResult').textContent='Answer all 10 questions before submitting.';return}const score=Math.round(correct/qs.length*100);state.academyScores[m.id]=score;if(score>=80){const first=!state.academyPassed[m.id];state.academyPassed[m.id]=true;if(first)state.xp=(state.xp||0)+Math.max(1,score-80);$('#quizResult').innerHTML=`<strong>Passed — ${score}%</strong><br>${m.code} is now shown in full yellow against every KSB mapped to Assignment ${m.assignmentNumber}.`;toast(`${m.code} passed`)}else{$('#quizResult').innerHTML=`<strong>Not passed — ${score}%</strong><br>Review the assignment KSBs and try again.`}save()};
+  $('#academyQuiz').onsubmit=e=>{e.preventDefault();let correct=0,answered=0;qs.forEach((q,i)=>{const picked=$(`input[name="q${i}"]:checked`);if(picked){answered++;if(Number(picked.value)===q.answer)correct++}});if(answered<qs.length){$('#quizResult').textContent='Answer all 10 questions before submitting.';return}const score=Math.round(correct/qs.length*100);state.academyScores[m.id]=score;if(score>=80){const first=!state.academyPassed[m.id];state.academyPassed[m.id]=true;state.academyCompletionDates[m.id]=state.academyCompletionDates[m.id]||new Date().toISOString();if(first)state.xp=(state.xp||0)+Math.max(1,score-80);$('#quizResult').innerHTML=`<strong>Passed — ${score}%</strong><br>${m.code} is now shown in full yellow against every KSB mapped to Assignment ${m.assignmentNumber}.`;toast(`${m.code} passed`)}else{$('#quizResult').innerHTML=`<strong>Not passed — ${score}%</strong><br>Review the assignment KSBs and try again.`}save()};
 }
 function ksbCode(value=''){return String(value).match(/^[KSB]\d+/i)?.[0].toUpperCase()||String(value).trim()}
 function ksbMatrix(c){
@@ -177,13 +177,42 @@ function suggestedPoints(p){
   while(out.length<5)out.push(fallback[out.length]);
   return out.slice(0,5);
 }
+function compressPhoto(file){
+  return new Promise((resolve,reject)=>{
+    if(!file||!file.type.startsWith('image/'))return reject(new Error('Please choose an image file.'));
+    const reader=new FileReader();
+    reader.onerror=()=>reject(new Error('The photo could not be read.'));
+    reader.onload=()=>{
+      const img=new Image();
+      img.onerror=()=>reject(new Error('The photo could not be opened.'));
+      img.onload=()=>{
+        const max=1400,scale=Math.min(1,max/Math.max(img.width,img.height));
+        const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*scale));canvas.height=Math.max(1,Math.round(img.height*scale));
+        const ctx=canvas.getContext('2d');ctx.drawImage(img,0,0,canvas.width,canvas.height);
+        resolve(canvas.toDataURL('image/jpeg',0.72));
+      };
+      img.src=reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
 function openPhotoChooser(index,onPick,prompt,title){
   const wrap=document.createElement('div');
   wrap.className='modal-wrap';
-  wrap.innerHTML=`<div class="modal-card"><div class="modal-grip"></div><h3>${esc(title||`Photo ${index+1}`)}</h3><div class="photo-full-description"><b>What this photo should show</b><p>${esc(prompt||'Add clear photographic evidence for this skill.')}</p></div><p class="muted chooser-help">Choose where the photo should come from.</p><button class="choice camera">📷 <span><b>Take a photo</b><small>Open the phone camera</small></span></button><button class="choice gallery">🖼️ <span><b>Choose from gallery</b><small>Select an existing image</small></span></button><button class="modal-cancel">Cancel</button><input class="camera-input" type="file" accept="image/*" capture="environment"><input class="gallery-input" type="file" accept="image/*"></div>`;
+  wrap.innerHTML=`<div class="modal-card"><div class="modal-grip"></div><h3>${esc(title||`Photo ${index+1}`)}</h3><div class="photo-full-description"><b>What this photo should show</b><p>${esc(prompt||'Add clear photographic evidence for this skill.')}</p></div><p class="muted chooser-help">Choose where the photo should come from.</p><button class="choice camera">📷 <span><b>Take a photo</b><small>Open the phone camera</small></span></button><button class="choice gallery">🖼️ <span><b>Choose from gallery</b><small>Select an existing image</small></span></button><div class="photo-save-status" hidden>Saving photo…</div><button class="modal-cancel">Cancel</button><input class="camera-input" type="file" accept="image/*" capture="environment"><input class="gallery-input" type="file" accept="image/*"></div>`;
   document.body.appendChild(wrap);
   const close=()=>wrap.remove();
-  const process=input=>{input.onchange=e=>{const f=e.target.files&&e.target.files[0];if(!f)return close();const r=new FileReader();r.onload=()=>{onPick(r.result,index);close()};r.readAsDataURL(f)};input.click()};
+  const process=input=>{
+    input.value='';
+    input.onchange=async e=>{
+      const f=e.target.files&&e.target.files[0];if(!f)return;
+      const status=wrap.querySelector('.photo-save-status');status.hidden=false;
+      wrap.querySelectorAll('button').forEach(b=>b.disabled=true);
+      try{const data=await compressPhoto(f);await onPick(data,index);close();toast('Photo saved')}
+      catch(err){status.hidden=false;status.textContent=err.message||'Photo could not be saved.';wrap.querySelectorAll('button').forEach(b=>b.disabled=false)}
+    };
+    input.click();
+  };
   wrap.querySelector('.camera').onclick=()=>process(wrap.querySelector('.camera-input'));
   wrap.querySelector('.gallery').onclick=()=>process(wrap.querySelector('.gallery-input'));
   wrap.querySelector('.modal-cancel').onclick=close;
@@ -208,12 +237,52 @@ function renderAssignment(){
     a.statementPrompts.forEach((p,i)=>document.querySelector(`[data-prompt="${i}"]`)?.classList.toggle('ok',promptHit(d.text,concisePrompt(p))));
     const complete=$('#complete');complete.disabled=!currentReady;
   };
-  $('#complete').onclick=()=>{let nowReady=words(d.text)>=100&&a.statementPrompts.filter(p=>promptHit(d.text,concisePrompt(p))).length===a.statementPrompts.length&&d.photos.filter(Boolean).length===6;if(!nowReady)return;if(!state.completed[key(a)]){state.completed[key(a)]={date:new Date().toISOString(),title:a.title,course:course().name};state.xp=(state.xp||0)+1000;save();toast('Assignment completed — 1,000 XP awarded')}setTimeout(()=>{view.assignment=null;render()},700)};
+  $('#complete').onclick=()=>{let nowReady=words(d.text)>=100&&a.statementPrompts.filter(p=>promptHit(d.text,concisePrompt(p))).length===a.statementPrompts.length&&d.photos.filter(Boolean).length===6;if(!nowReady)return;if(!state.completed[key(a)]){const completedAt=new Date().toISOString();state.completed[key(a)]={date:completedAt,title:a.title,course:course().name,number:a.number};state.xp=(state.xp||0)+1000;save();toast('Assignment completed — '+new Date(completedAt).toLocaleDateString())}setTimeout(()=>{view.assignment=null;render()},700)};
 }
-function renderDocuments(){let entries=Object.entries(state.completed);shell('Documents',`<div class="card"><h2>Assignment documents</h2><p class="muted">Completed evidence can be opened and printed or saved as a PDF from your browser.</p></div>${entries.length?`<div class="list">${entries.map(([k,v])=>`<div class="assignment" data-doc="${k}"><div class="num">✓</div><div class="grow"><h3>${esc(v.course)} — ${esc(v.title)}</h3><div class="muted">Completed ${new Date(v.date).toLocaleDateString()}</div></div><span>›</span></div>`).join('')}</div>`:`<div class="card empty">No completed assignments yet.</div>`}`);$$('[data-doc]').forEach(x=>x.onclick=()=>{let [cid,num]=x.dataset.doc.split(/-(?=\d+$)/);view.courseId=cid;view.assignment=Number(num);renderAssignment();setTimeout(()=>window.print(),300)})}
+function documentWindow(title,body){
+  const w=window.open('','_blank');if(!w){toast('Allow pop-ups to open the PDF');return null}
+  w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>${esc(title)}</title><style>@page{size:A4;margin:14mm}body{font-family:Arial,sans-serif;color:#073f43;margin:0}h1{font-size:25px;margin:0 0 5px}h2{font-size:18px;border-bottom:2px solid #66e52b;padding-bottom:5px}.meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.box{border:1px solid #b9d7d2;border-radius:12px;padding:10px}.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.photos img{width:100%;height:150px;object-fit:cover;border-radius:8px}.statement{white-space:pre-wrap;line-height:1.45}.signature{height:70px;max-width:260px;object-fit:contain}.footer{margin-top:18px;padding-top:10px;border-top:1px solid #ccc;font-size:12px;color:#567}.no-print{position:fixed;right:15px;top:15px}button{padding:10px 16px;border:0;border-radius:8px;background:#18a77d;color:#fff;font-weight:bold}@media print{.no-print{display:none}}</style></head><body><button class="no-print" onclick="window.print()">Download / Save PDF</button>${body}<div class="footer">Generated by Apprentice+ · Your Course, Your Way</div></body></html>`);w.document.close();return w;
+}
+function assignmentPdf(cid,num){
+  const c=APP_COURSES.find(x=>x.id===cid),a=c?.assignments.find(x=>x.number===Number(num));if(!c||!a)return;
+  const d=state.drafts[`${cid}-${a.number}`]||{text:'',photos:[]},done=state.completed[`${cid}-${a.number}`];
+  const date=done?.date?new Date(done.date).toLocaleDateString('en-GB'):'Not completed';
+  documentWindow(`AS${a.number} ${a.title}`,`<h1>Assignment ${a.number}: ${esc(a.title)}</h1><div>${esc(c.name)} · ${esc(c.reference)} · Version ${esc(c.version)}</div><div class="meta"><div class="box"><b>Apprentice</b><br>${esc(state.name)}</div><div class="box"><b>Completion date</b><br>${date}</div></div><h2>Photographic evidence</h2><div class="photos">${(d.photos||[]).filter(Boolean).map(x=>`<img src="${x}">`).join('')}</div><h2>Activity statement</h2><div class="statement">${esc(d.text||'')}</div><h2>Mapped KSBs</h2><p>${a.ksbs.map(esc).join(' · ')}</p><h2>Apprentice signature</h2>${state.signature?`<img class="signature" src="${state.signature}">`:'<p>No signature saved.</p>'}`);
+}
+function academyPdf(cid,num){
+  const c=APP_COURSES.find(x=>x.id===cid),m=academyModules(c).find(x=>x.assignmentNumber===Number(num));if(!c||!m)return;
+  const score=state.academyScores[m.id],date=state.academyCompletionDates[m.id]?new Date(state.academyCompletionDates[m.id]).toLocaleDateString('en-GB'):'Not completed';
+  documentWindow(`${m.code} ${m.title}`,`<h1>${esc(m.code)}: ${esc(m.title)}</h1><div>${esc(c.name)} · ${esc(c.reference)} · Version ${esc(c.version)}</div><div class="meta"><div class="box"><b>Apprentice</b><br>${esc(state.name)}</div><div class="box"><b>Completion date</b><br>${date}</div><div class="box"><b>Quiz result</b><br>${score??0}%</div><div class="box"><b>Status</b><br>${state.academyPassed[m.id]?'Passed':'Not passed'}</div></div><h2>Mapped KSBs</h2><p>${m.ksbs.map(esc).join(' · ')}</p><h2>Apprentice signature</h2>${state.signature?`<img class="signature" src="${state.signature}">`:'<p>No signature saved.</p>'}`);
+}
+function renderDocuments(){
+  const assignmentEntries=Object.entries(state.completed).filter(([k])=>k.startsWith(view.courseId+'-'));
+  const academyEntries=academyModules(course()).filter(m=>state.academyPassed[m.id]);
+  const assignmentCards=assignmentEntries.map(([k,v])=>{const num=Number(k.split('-').pop());return `<div class="document-card"><div><span class="tag">AS${num}</span><h3>${esc(v.title)}</h3><div class="muted">Completed ${new Date(v.date).toLocaleDateString('en-GB')}</div></div><div class="document-actions"><button data-edit-as="${num}">Edit</button><button data-download-as="${num}">Download</button><button class="danger-mini" data-delete-as="${num}">Delete</button></div></div>`}).join('');
+  const academyCards=academyEntries.map(m=>`<div class="document-card"><div><span class="tag academy-tag">${m.code}</span><h3>${esc(m.title)}</h3><div class="muted">Passed ${state.academyScores[m.id]}% · ${new Date(state.academyCompletionDates[m.id]||Date.now()).toLocaleDateString('en-GB')}</div></div><div class="document-actions"><button data-edit-at="${m.assignmentNumber}">Edit</button><button data-download-at="${m.assignmentNumber}">Download</button><button class="danger-mini" data-delete-at="${m.assignmentNumber}">Delete</button></div></div>`).join('');
+  shell('Documents',`<div class="card"><h2>PDF documents</h2><p class="muted">Edit evidence, open a print-ready PDF, download it using Save as PDF, or delete the completed document.</p></div><h2 class="section-title">Assignments</h2>${assignmentCards||'<div class="card empty">No completed assignments yet.</div>'}<h2 class="section-title">Academy topics</h2>${academyCards||'<div class="card empty">No passed Academy topics yet.</div>'}`);
+  $$('[data-edit-as]').forEach(b=>b.onclick=()=>{view.tab='apprenticeship';view.assignment=Number(b.dataset.editAs);render()});
+  $$('[data-download-as]').forEach(b=>b.onclick=()=>assignmentPdf(view.courseId,Number(b.dataset.downloadAs)));
+  $$('[data-delete-as]').forEach(b=>b.onclick=()=>{const n=Number(b.dataset.deleteAs);if(confirm(`Delete completed AS${n} PDF status? The draft evidence will remain available for editing.`)){delete state.completed[`${view.courseId}-${n}`];save();renderDocuments()}});
+  $$('[data-edit-at]').forEach(b=>b.onclick=()=>{view.tab='academy';view.academyModule=`${view.courseId}-AT${b.dataset.editAt}`;render()});
+  $$('[data-download-at]').forEach(b=>b.onclick=()=>academyPdf(view.courseId,Number(b.dataset.downloadAt)));
+  $$('[data-delete-at]').forEach(b=>b.onclick=()=>{const n=Number(b.dataset.deleteAt),id=`${view.courseId}-AT${n}`;if(confirm(`Delete completed AT${n} document and pass status?`)){delete state.academyPassed[id];delete state.academyScores[id];delete state.academyCompletionDates[id];save();renderDocuments()}});
+}
+function setupSignaturePad(){
+  const canvas=$('#signaturePad');if(!canvas)return;const ctx=canvas.getContext('2d');ctx.lineWidth=4;ctx.lineCap='round';ctx.strokeStyle='#073f43';
+  if(state.signature){const img=new Image();img.onload=()=>ctx.drawImage(img,0,0,canvas.width,canvas.height);img.src=state.signature}
+  let drawing=false;
+  const point=e=>{const r=canvas.getBoundingClientRect(),t=e.touches?.[0]||e;return {x:(t.clientX-r.left)*canvas.width/r.width,y:(t.clientY-r.top)*canvas.height/r.height}};
+  const begin=e=>{e.preventDefault();drawing=true;const p=point(e);ctx.beginPath();ctx.moveTo(p.x,p.y)};
+  const move=e=>{if(!drawing)return;e.preventDefault();const p=point(e);ctx.lineTo(p.x,p.y);ctx.stroke()};
+  const end=e=>{if(!drawing)return;e?.preventDefault();drawing=false;state.signature=canvas.toDataURL('image/png');save()};
+  canvas.addEventListener('pointerdown',begin);canvas.addEventListener('pointermove',move);window.addEventListener('pointerup',end,{once:false});
+  canvas.addEventListener('touchstart',begin,{passive:false});canvas.addEventListener('touchmove',move,{passive:false});canvas.addEventListener('touchend',end,{passive:false});
+  $('#clearSignature').onclick=()=>{ctx.clearRect(0,0,canvas.width,canvas.height);state.signature='';save();toast('Signature cleared')};
+}
 function renderSettings(){
-  shell('Settings',`<div class="card"><h2>Profile</h2><div class="form-row"><label>Apprentice name</label><input id="name" value="${esc(state.name)}"></div><div class="form-row"><label>Selected course</label><select id="setCourse">${APP_COURSES.map(c=>`<option value="${c.id}" ${c.id===view.courseId?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div><button class="btn btn-primary" id="saveSettings">Save settings</button></div><div class="card update-card"><h2>App updates</h2><div class="version-grid"><div><span>Installed</span><b>Build ${APP_VERSION}</b></div><div><span>Latest on GitHub</span><b id="latestVersion">Not checked</b></div></div><div class="update-status" id="updateStatus">Checking for updates…</div><button class="btn btn-primary" id="checkUpdates">Check for updates</button><button class="btn btn-secondary" id="downloadUpdate" hidden>Download update</button><button class="btn btn-secondary" id="restartApp" hidden>Restart app</button><p class="install-note">Apprentice+ checks GitHub whenever it opens. Your saved evidence remains on this phone.</p></div><div class="card"><h2>App data</h2><p class="muted">Your evidence is stored locally on this device.</p><button class="btn btn-secondary" id="export">Export backup</button> <button class="btn btn-danger" id="reset">Reset app</button></div><div class="card install-card"><h2>Install Apprentice+</h2><p class="muted">Add Apprentice+ to your phone for full-screen access and offline use.</p><button class="btn btn-primary" id="installApp">Install app</button><p class="install-note" id="installNote">Chrome will show the installation option when it is available.</p></div>`);
+  shell('Settings',`<div class="card"><h2>Apprentice profile</h2><div class="form-row"><label>Apprentice name</label><input id="name" value="${esc(state.name)}"></div><div class="form-row"><label>Apprentice signature</label><div class="signature-wrap"><canvas id="signaturePad" width="600" height="180"></canvas></div><div class="signature-actions"><button type="button" class="btn btn-secondary" id="clearSignature">Clear signature</button></div><p class="muted">Sign inside the box. This signature is added to assignment and Academy PDFs.</p></div><div class="form-row"><label>Selected course</label><select id="setCourse">${APP_COURSES.map(c=>`<option value="${c.id}" ${c.id===view.courseId?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div><button class="btn btn-primary" id="saveSettings">Save settings</button></div><div class="card update-card"><h2>App updates</h2><div class="version-grid"><div><span>Installed</span><b>Build ${APP_VERSION}</b></div><div><span>Latest on GitHub</span><b id="latestVersion">Not checked</b></div></div><div class="update-status" id="updateStatus">Checking for updates…</div><button class="btn btn-primary" id="checkUpdates">Check for updates</button><button class="btn btn-secondary" id="downloadUpdate" hidden>Download update</button><button class="btn btn-secondary" id="restartApp" hidden>Restart app</button><p class="install-note">Apprentice+ checks GitHub whenever it opens. Your saved evidence remains on this phone.</p></div><div class="card"><h2>App data</h2><p class="muted">Your evidence is stored locally on this device.</p><button class="btn btn-secondary" id="export">Export backup</button> <button class="btn btn-danger" id="reset">Reset app</button></div><div class="card install-card"><h2>Install Apprentice+</h2><p class="muted">Add Apprentice+ to your phone for full-screen access and offline use.</p><button class="btn btn-primary" id="installApp">Install app</button><p class="install-note" id="installNote">Chrome will show the installation option when it is available.</p></div>`);
   $('#saveSettings').onclick=()=>{state.name=$('#name').value.trim()||'Apprentice';view.courseId=$('#setCourse').value;save();toast('Settings saved');render()};
+  setupSignaturePad();
   $('#export').onclick=()=>{let b=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='apprentice-plus-backup.json';a.click();URL.revokeObjectURL(u)};
   $('#reset').onclick=()=>{if(confirm('Delete all local Apprentice+ data?')){localStorage.removeItem('applus-state');location.reload()}};
 
