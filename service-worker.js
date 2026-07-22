@@ -1,6 +1,6 @@
-const VERSION='2.4';
-const CACHE=`applus-${VERSION}`;
-const CORE=['./','index.html','app.css','app.js','courses.js','academy-questions.js','manifest.json','version.json','logo.png','icon-192.png','icon-512.png'];
+const VERSION='3.5';
+const CACHE=`applus-${VERSION}-rewards-system`;
+const CORE=['./','index.html','app.css','rewards.css','app.js','courses.js','academy-questions.js','manifest.json','version.json','logo.png','icon-192.png','icon-512.png'];
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)));
