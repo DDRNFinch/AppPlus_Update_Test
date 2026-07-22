@@ -38,3 +38,11 @@
 .academy-quiz fieldset{border:0;padding:0;margin:22px 0}.academy-quiz legend{font-weight:900;line-height:1.45;margin-bottom:10px}.academy-quiz label{display:flex;gap:9px;align-items:flex-start;padding:11px 12px;border:1px solid var(--line);border-radius:14px;margin:8px 0;background:#f9fcfb}.academy-quiz input{margin-top:3px}.quiz-result{margin-top:14px;padding:13px;border-radius:14px;background:#eef7f4;line-height:1.5}
 .matrix-legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.matrix-legend span{border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900}.legend-assignment{background:#20c66c;color:#fff}.legend-academy.pending,.academy-support.pending{background:rgba(244,207,49,.28);border:1px solid rgba(196,151,0,.35);color:#6b5700}.legend-academy.passed,.academy-support.passed{background:#f4cf31;border:1px solid #d6ad08;color:#443600}
 .matrix-evidence{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.academy-support{border-radius:11px;padding:7px 10px;font-weight:900;cursor:pointer}.academy-support.passed{box-shadow:0 4px 12px rgba(196,151,0,.18)}
+.subtabs.three{grid-template-columns:repeat(3,1fr)}
+.subtabs.three button{font-size:14px;padding:14px 7px}
+.legend-witness.pending,.witness-support.pending{background:rgba(75,145,190,.16);border:1px solid rgba(54,113,153,.28);color:#285f82}
+.legend-witness.passed,.witness-support.passed{background:#4b91be;border:1px solid #33749f;color:#fff}
+.witness-support{border-radius:11px;padding:7px 10px;font-weight:900;cursor:pointer}
+.assignment.witness-done{border-color:#4b91be;background:linear-gradient(145deg,#fff,#eef8ff)}
+.assignment.witness-done .num{background:#4b91be;color:#fff}
+.matrix-assignments{display:flex;gap:7px;flex-wrap:wrap;align-items:center}

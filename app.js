@@ -1,10 +1,10 @@
 
 const $=(s,p=document)=>p.querySelector(s), $$=(s,p=document)=>[...p.querySelectorAll(s)];
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set(k,v){localStorage.setItem(k,JSON.stringify(v))}};
-let state=store.get('applus-state',{name:'Apprentice',courseId:'brick',xp:0,completed:{},drafts:{},rewards:[],academyPassed:{},academyScores:{},tab:'home'});
-state.academyPassed=state.academyPassed||{}; state.academyScores=state.academyScores||{};
-let view={tab:state.tab||'home',courseId:state.courseId||'brick',assignment:null,academyModule:null,apprenticeshipTab:state.apprenticeshipTab||'assignments'};
-const APP_VERSION='1.7';
+let state=store.get('applus-state',{name:'Apprentice',courseId:'brick',xp:0,completed:{},drafts:{},rewards:[],academyPassed:{},academyScores:{},witnessTestimonies:{},tab:'home'});
+state.academyPassed=state.academyPassed||{}; state.academyScores=state.academyScores||{}; state.witnessTestimonies=state.witnessTestimonies||{};
+let view={tab:state.tab||'home',courseId:state.courseId||'brick',assignment:null,academyModule:null,witnessAssignment:null,apprenticeshipTab:state.apprenticeshipTab||'assignments'};
+const APP_VERSION='1.8';
 let deferredInstallPrompt=null;
 let swRegistration=null;
 let refreshingForUpdate=false;
@@ -17,58 +17,74 @@ function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt
 function toast(t){document.body.insertAdjacentHTML('beforeend',`<div class="toast">${esc(t)}</div>`);setTimeout(()=>$('.toast')?.remove(),1800)}
 function header(title){return `<header class="header"><div class="brand"><img src="logo.png"><div><div class="eyebrow">APPRENTICE+</div><h1>${esc(title)}</h1><div class="subtitle">Your Course, Your Way</div><span class="build">Build ${APP_VERSION}</span></div></div></header>`}
 const nav=()=>`<nav class="nav">${[['home','⌂','Home'],['academy','☆','Academy'],['apprenticeship','▣','Apprenticeship'],['documents','▤','Documents'],['settings','⚙','Settings']].map(([id,i,l])=>`<button data-tab="${id}" class="${view.tab===id?'active':''}"><span class="ico">${i}</span>${l}</button>`).join('')}</nav>`;
-function shell(title,body){$('#app').innerHTML=`<div class="app">${header(title)}<main class="main">${body}</main>${nav()}</div>`;$$('[data-tab]').forEach(b=>b.onclick=()=>{view.tab=b.dataset.tab;view.assignment=null;view.academyModule=null;save();render()})}
-function render(){if(view.assignment)return renderAssignment();if(view.academyModule)return renderAcademyModule();({home:renderHome,academy:renderAcademy,apprenticeship:renderApprenticeship,documents:renderDocuments,settings:renderSettings}[view.tab]||renderHome)()}
+function shell(title,body){$('#app').innerHTML=`<div class="app">${header(title)}<main class="main">${body}</main>${nav()}</div>`;$$('[data-tab]').forEach(b=>b.onclick=()=>{view.tab=b.dataset.tab;view.assignment=null;view.academyModule=null;view.witnessAssignment=null;save();render()})}
+function render(){if(view.assignment)return renderAssignment();if(view.academyModule)return renderAcademyModule();if(view.witnessAssignment)return renderWitnessTestimony();({home:renderHome,academy:renderAcademy,apprenticeship:renderApprenticeship,documents:renderDocuments,settings:renderSettings}[view.tab]||renderHome)()}
 function renderHome(){let total=APP_COURSES.reduce((n,c)=>n+c.assignments.length,0),done=Object.keys(state.completed).length; shell('Home',`<section class="hero"><div class="muted" style="color:#c9e7df">Welcome back,</div><div class="big">${esc(state.name)}</div><p>Build evidence, complete assignments and track your apprenticeship progress.</p><button class="btn btn-primary" id="continue">Continue apprenticeship</button></section><h2 class="section-title">Your progress</h2><div class="grid"><div class="stat"><b>${done}</b>Assignments complete</div><div class="stat"><b>${state.xp||0}</b>Total XP</div></div><div class="card"><h2>${esc(course().name)}</h2><p class="muted">${course().reference} · Version ${course().version}</p><div class="progress"><span style="width:${Math.round(completedCount()/course().assignments.length*100)}%"></span></div><p><b>${completedCount()} / ${course().assignments.length}</b> assignments</p></div><div class="card"><h2>Quick actions</h2><div class="grid"><button class="btn btn-secondary" data-go="academy">Open Academy</button><button class="btn btn-secondary" data-go="documents">View documents</button></div></div>`);$('#continue').onclick=()=>{view.tab='apprenticeship';render()};$$('[data-go]').forEach(b=>b.onclick=()=>{view.tab=b.dataset.go;render()})}
 function academyModules(c=course()){
-  return ksbMatrix(c).map((row,i)=>({
-    id:`${c.id}-${row.code}`,
-    code:row.code,
-    title:row.description||row.code,
-    description:row.description||row.code,
+  return c.assignments.map((a,i)=>({
+    id:`${c.id}-AT${a.number}`,
+    code:`AT${a.number}`,
+    assignmentNumber:a.number,
+    title:a.title,
+    description:`Assignment ${a.number}: ${a.title}`,
+    ksbs:(a.ksbs||[]).map(ksbCode),
+    assignment:a,
     order:i+1
   }));
 }
-function academyPoints(m){
-  const text=m.description.replace(/\s+/g,' ').trim();
-  const parts=text.split(/[.;:]\s*/).map(x=>x.trim()).filter(x=>x.length>10);
-  const generic=[
-    `Explain what ${m.code} means in your own words.`,
-    `Identify where ${m.code} applies during normal work.`,
-    `Describe the correct procedure or standard linked to ${m.code}.`,
-    `Give a workplace example that demonstrates ${m.code}.`,
-    `Explain how you would check that ${m.code} has been followed correctly.`
-  ];
-  const out=[];
-  for(const part of parts){if(!out.includes(part))out.push(part);if(out.length===5)break}
-  while(out.length<5)out.push(generic[out.length]);
-  return out.slice(0,5);
-}
 function academyQuestions(m){
-  const pts=academyPoints(m);
-  return pts.map((point,i)=>({
-    q:`Which option best supports ${m.code}: ${point}`,
-    options:[
-      point,
-      'Ignore the requirement if the task is nearly finished.',
-      'Use any method without checking the information provided.',
-      'Leave the responsibility entirely to another person.'
-    ],
-    answer:0
-  }));
+  const a=m.assignment;
+  const entries=(a.ksbs||[]).map(raw=>({code:ksbCode(raw),text:String(raw).replace(/^[KSB]\d+\s*:\s*/i,'').trim()}));
+  const fallback=entries[0]||{code:'KSB',text:a.title};
+  const makeDistractors=(correct,entry,index)=>{
+    const pool=[
+      `Proceed without checking the relevant information because practical experience is sufficient.`,
+      `Leave the requirement to another trade and continue with the task.`,
+      `Use the quickest available method even when it conflicts with the specification.`,
+      `Record the issue only after the work has been covered or completed.`,
+      `Rely on visual judgement without measurements, checks or documented controls.`,
+      `Ignore the requirement when the work area appears low risk.`,
+      `Substitute an unapproved material or process without authorisation.`
+    ];
+    return [correct,...pool.filter(x=>x!==correct).slice(index%3,index%3+3)].slice(0,4);
+  };
+  const templates=[
+    e=>`Which action most accurately demonstrates ${e.code} during ${a.title.toLowerCase()}?`,
+    e=>`A defect or hazard is identified while completing ${a.title.toLowerCase()}. Which response best applies ${e.code}?`,
+    e=>`Which evidence would most convincingly prove that ${e.code} was applied correctly?`,
+    e=>`Before starting ${a.title.toLowerCase()}, which check is most important in relation to ${e.code}?`,
+    e=>`Which decision would be least likely to compromise the requirement described in ${e.code}?`
+  ];
+  const qs=[];
+  for(let i=0;i<10;i++){
+    const e=entries[i%Math.max(entries.length,1)]||fallback;
+    const concise=e.text.replace(/\s+/g,' ').replace(/\.$/,'');
+    const correct=[
+      `Follow the stated requirement: ${concise}.`,
+      `Stop, assess the issue against the relevant information, apply suitable controls and record or report the outcome.`,
+      `Clear photographs, measurements or records showing that ${concise.toLowerCase()} was achieved.`,
+      `Confirm the drawing, specification, risk controls, materials and required quality checks before work begins.`,
+      `Use an authorised method, check the result against the specification and correct any non-conformance before continuing.`
+    ][i%5];
+    const options=makeDistractors(correct,e,i);
+    const shift=i%4;
+    const rotated=options.slice(shift).concat(options.slice(0,shift));
+    qs.push({q:templates[i%templates.length](e),options:rotated,answer:rotated.indexOf(correct),ksb:e.code});
+  }
+  return qs;
 }
 function renderAcademy(){
   const c=course(), modules=academyModules(c), passed=modules.filter(m=>state.academyPassed[m.id]).length;
-  shell('Academy',`<div class="course-banner"><span>Selected course</span><strong>${esc(c.name)}</strong></div><div class="card academy-overview"><h2>Course Academy</h2><p class="muted">Each course-specific topic supports one KSB. Passing a topic adds supporting evidence to the KSB Matrix but does not complete the KSB.</p><div class="progress"><span style="width:${modules.length?Math.round(passed/modules.length*100):0}%"></span></div><p><b>${passed} / ${modules.length}</b> topics passed</p></div><div class="list">${modules.map(m=>{const done=!!state.academyPassed[m.id],score=state.academyScores[m.id];return `<div class="assignment academy-item ${done?'academy-passed':''}" data-module="${esc(m.id)}"><div class="num">${done?'✓':m.code}</div><div class="grow"><h3>${esc(m.title)}</h3><div class="muted">${done?`Passed${score!=null?` · ${score}%`:''}`:'5 learning points · 5 questions · 80% pass'}</div></div><span>›</span></div>`}).join('')}</div>`);
+  shell('Academy',`<div class="course-banner"><span>Selected course</span><strong>${esc(c.name)}</strong></div><div class="card academy-overview"><h2>Assignment Academy</h2><p class="muted">Each Academy topic matches one apprenticeship assignment. Every topic has a difficult 10-question course-specific quiz and provides supporting KSB evidence only.</p><div class="progress"><span style="width:${modules.length?Math.round(passed/modules.length*100):0}%"></span></div><p><b>${passed} / ${modules.length}</b> topics passed</p></div><div class="list">${modules.map(m=>{const done=!!state.academyPassed[m.id],score=state.academyScores[m.id];return `<div class="assignment academy-item ${done?'academy-passed':''}" data-module="${esc(m.id)}"><div class="num">${done?'✓':m.code}</div><div class="grow"><h3>${esc(m.code)}: ${esc(m.title)}</h3><div class="muted">${done?`Passed${score!=null?` · ${score}%`:''}`:'10 difficult questions · 80% pass'}</div></div><span>›</span></div>`}).join('')}</div>`);
   $$('[data-module]').forEach(x=>x.onclick=()=>{view.academyModule=x.dataset.module;render()});
 }
 function renderAcademyModule(){
   const c=course(),m=academyModules(c).find(x=>x.id===view.academyModule);
   if(!m){view.academyModule=null;return renderAcademy()}
-  const points=academyPoints(m),qs=academyQuestions(m),passed=!!state.academyPassed[m.id];
-  shell('Academy',`<button class="back" id="backAcademy">‹ Back to Academy</button><div class="card academy-topic"><span class="academy-ksb">${esc(m.code)}</span><h2>${esc(m.title)}</h2><p class="muted">This topic provides supporting evidence for ${esc(m.code)}. It does not complete the KSB.</p></div><div class="card"><h2>Learning points</h2><div class="learning-points">${points.map((p,i)=>`<div><b>${i+1}</b><span>${esc(p)}</span></div>`).join('')}</div></div><form class="card academy-quiz" id="academyQuiz"><h2>Knowledge check</h2><p class="muted">Score at least 80% to pass.</p>${qs.map((q,qi)=>`<fieldset><legend>${qi+1}. ${esc(q.q)}</legend>${q.options.map((o,oi)=>`<label><input type="radio" name="q${qi}" value="${oi}"> <span>${esc(o)}</span></label>`).join('')}</fieldset>`).join('')}<button class="btn btn-primary" type="submit">${passed?'Retake topic':'Submit answers'}</button><div class="quiz-result" id="quizResult">${passed?`Previously passed${state.academyScores[m.id]!=null?` with ${state.academyScores[m.id]}%`:''}.`:''}</div></form>`);
+  const qs=academyQuestions(m),passed=!!state.academyPassed[m.id];
+  shell('Academy',`<button class="back" id="backAcademy">‹ Back to Academy</button><div class="card academy-topic"><span class="academy-ksb">${esc(m.code)}</span><h2>Assignment ${m.assignmentNumber}: ${esc(m.title)}</h2><p class="muted">Mapped KSBs: ${m.ksbs.map(esc).join(', ')}. Passing this quiz adds Academy supporting evidence but does not complete any KSB.</p></div><form class="card academy-quiz" id="academyQuiz"><h2>10-question assessment</h2><p class="muted">The questions are specific to this assignment. Score at least 80% to pass.</p>${qs.map((q,qi)=>`<fieldset><legend>${qi+1}. ${esc(q.q)} <small class="muted">${esc(q.ksb)}</small></legend>${q.options.map((o,oi)=>`<label><input type="radio" name="q${qi}" value="${oi}"> <span>${esc(o)}</span></label>`).join('')}</fieldset>`).join('')}<button class="btn btn-primary" type="submit">${passed?'Retake quiz':'Submit answers'}</button><div class="quiz-result" id="quizResult">${passed?`Previously passed${state.academyScores[m.id]!=null?` with ${state.academyScores[m.id]}%`:''}.`:''}</div></form>`);
   $('#backAcademy').onclick=()=>{view.academyModule=null;render()};
-  $('#academyQuiz').onsubmit=e=>{e.preventDefault();let correct=0,answered=0;qs.forEach((q,i)=>{const picked=$(`input[name="q${i}"]:checked`);if(picked){answered++;if(Number(picked.value)===q.answer)correct++}});if(answered<qs.length){$('#quizResult').textContent='Answer all five questions before submitting.';return}const score=Math.round(correct/qs.length*100);state.academyScores[m.id]=score;if(score>=80){state.academyPassed[m.id]=true;state.xp=(state.xp||0)+Math.max(1,score-80);$('#quizResult').innerHTML=`<strong>Passed — ${score}%</strong><br>This topic is now shown as full yellow supporting evidence in the KSB Matrix.`;toast(`${m.code} Academy topic passed`)}else{$('#quizResult').innerHTML=`<strong>Not passed — ${score}%</strong><br>Review the learning points and try again.`}save()};
+  $('#academyQuiz').onsubmit=e=>{e.preventDefault();let correct=0,answered=0;qs.forEach((q,i)=>{const picked=$(`input[name="q${i}"]:checked`);if(picked){answered++;if(Number(picked.value)===q.answer)correct++}});if(answered<qs.length){$('#quizResult').textContent='Answer all 10 questions before submitting.';return}const score=Math.round(correct/qs.length*100);state.academyScores[m.id]=score;if(score>=80){const first=!state.academyPassed[m.id];state.academyPassed[m.id]=true;if(first)state.xp=(state.xp||0)+Math.max(1,score-80);$('#quizResult').innerHTML=`<strong>Passed — ${score}%</strong><br>${m.code} is now shown in full yellow against every KSB mapped to Assignment ${m.assignmentNumber}.`;toast(`${m.code} passed`)}else{$('#quizResult').innerHTML=`<strong>Not passed — ${score}%</strong><br>Review the assignment KSBs and try again.`}save()};
 }
 function ksbCode(value=''){return String(value).match(/^[KSB]\d+/i)?.[0].toUpperCase()||String(value).trim()}
 function ksbMatrix(c){
@@ -81,15 +97,32 @@ function ksbMatrix(c){
   const order={K:0,S:1,B:2};
   return [...map.values()].sort((a,b)=>(order[a.code[0]]-order[b.code[0]])||(Number(a.code.slice(1))-Number(b.code.slice(1))));
 }
+function witnessKey(number){return `${view.courseId}-WT${number}`}
 function renderApprenticeship(){
   let c=course(),pct=Math.round(completedCount(c)/c.assignments.length*100),sub=view.apprenticeshipTab||'assignments';
   const assignments=`<h2 class="section-title">Assignments</h2><div class="list">${c.assignments.map(a=>{let d=state.completed[`${c.id}-${a.number}`];return `<div class="assignment ${d?'done':''}" data-a="${a.number}"><div class="num">${d?'✓':a.number}</div><div class="grow"><h3>Assignment ${a.number}: ${esc(a.title)}</h3><div class="muted">6 photos · 100+ word statement</div></div><span>›</span></div>`}).join('')}</div>`;
+  const witnesses=`<div class="card"><h2>Witness Testimonies</h2><p class="muted">An employer or workplace witness selects an assignment and writes a testimony against the same prompts used in that assignment.</p><button class="btn btn-primary" id="createWitness">Create witness testimony</button></div><div class="list">${c.assignments.map(a=>{const wt=state.witnessTestimonies[`${c.id}-WT${a.number}`];return `<div class="assignment ${wt?.completed?'witness-done':''}" data-wt="${a.number}"><div class="num">${wt?.completed?'✓':`WT${a.number}`}</div><div class="grow"><h3>${esc(a.title)}</h3><div class="muted">${wt?.completed?`Completed by ${esc(wt.witnessName||'workplace witness')}`:'Not completed'}</div></div><span>›</span></div>`}).join('')}</div>`;
   const rows=ksbMatrix(c);
-  const matrix=`<div class="card matrix-intro"><h2>KSB Matrix</h2><p class="muted">Green shows completed assignment evidence. Yellow shows Academy supporting evidence. Academy evidence supports a KSB but never completes it.</p><div class="matrix-legend"><span class="legend-assignment">Assignment complete</span><span class="legend-academy pending">Academy not passed</span><span class="legend-academy passed">Academy passed</span></div></div><div class="ksb-matrix">${rows.map(r=>{const done=r.assignments.length>0&&r.assignments.every(a=>state.completed[`${c.id}-${a.number}`]);const aid=`${c.id}-${r.code}`,apassed=!!state.academyPassed[aid];return `<div class="matrix-row ${done?'complete':''}"><div class="matrix-code">${done?'✓ ':''}${esc(r.code)}</div><div class="matrix-content"><h3>${esc(r.description||r.code)}</h3><div class="matrix-evidence"><div class="matrix-assignments">${r.assignments.map(a=>{const adone=!!state.completed[`${c.id}-${a.number}`];return `<button class="matrix-assignment ${adone?'complete':''}" data-matrix-a="${a.number}" title="${esc(a.title)}">${adone?'✓ ':''}A${a.number}</button>`}).join('')}</div><button class="academy-support ${apassed?'passed':'pending'}" data-academy-ksb="${esc(aid)}">${apassed?'✓ Academy passed':'Academy support'}</button></div></div></div>`}).join('')}</div>`;
-  shell('Apprenticeship',`<div class="card"><div class="course-banner fixed"><span>Current course</span><strong>${esc(c.name)}</strong></div><div class="progress"><span style="width:${pct}%"></span></div><p><b>${completedCount(c)} / ${c.assignments.length}</b> completed · ${pct}%</p></div><div class="subtabs"><button class="${sub==='assignments'?'active':''}" data-subtab="assignments">Assignments</button><button class="${sub==='matrix'?'active':''}" data-subtab="matrix">KSB Matrix</button></div>${sub==='assignments'?assignments:matrix}`);
+  const matrix=`<div class="card matrix-intro"><h2>KSB Matrix</h2><p class="muted">AS = assignment evidence, AT = Academy topic quiz and WT = witness testimony. Only completed assignments turn the KSB green; Academy and witness items are supporting evidence.</p><div class="matrix-legend"><span class="legend-assignment">AS completed</span><span class="legend-academy pending">AT not passed</span><span class="legend-academy passed">AT passed</span><span class="legend-witness pending">WT not added</span><span class="legend-witness passed">WT completed</span></div></div><div class="ksb-matrix">${rows.map(r=>{const done=r.assignments.length>0&&r.assignments.every(a=>state.completed[`${c.id}-${a.number}`]);return `<div class="matrix-row ${done?'complete':''}"><div class="matrix-code">${done?'✓ ':''}${esc(r.code)}</div><div class="matrix-content"><h3>${esc(r.description||r.code)}</h3><div class="matrix-evidence"><div class="matrix-assignments">${r.assignments.map(a=>{const adone=!!state.completed[`${c.id}-${a.number}`],atId=`${c.id}-AT${a.number}`,atDone=!!state.academyPassed[atId],wt=state.witnessTestimonies[`${c.id}-WT${a.number}`];return `<button class="matrix-assignment ${adone?'complete':''}" data-matrix-a="${a.number}" title="${esc(a.title)}">${adone?'✓ ':''}AS${a.number}</button><button class="academy-support ${atDone?'passed':'pending'}" data-academy-topic="${esc(atId)}" title="Academy: ${esc(a.title)}">${atDone?'✓ ':''}AT${a.number}</button><button class="witness-support ${wt?.completed?'passed':'pending'}" data-witness-topic="${a.number}" title="Witness testimony: ${esc(a.title)}">${wt?.completed?'✓ ':''}WT${a.number}</button>`}).join('')}</div></div></div></div>`}).join('')}</div>`;
+  shell('Apprenticeship',`<div class="card"><div class="course-banner fixed"><span>Current course</span><strong>${esc(c.name)}</strong></div><div class="progress"><span style="width:${pct}%"></span></div><p><b>${completedCount(c)} / ${c.assignments.length}</b> completed · ${pct}%</p></div><div class="subtabs three"><button class="${sub==='assignments'?'active':''}" data-subtab="assignments">Assignments</button><button class="${sub==='matrix'?'active':''}" data-subtab="matrix">KSB Matrix</button><button class="${sub==='witness'?'active':''}" data-subtab="witness">Witness</button></div>${sub==='assignments'?assignments:sub==='matrix'?matrix:witnesses}`);
   $$('[data-subtab]').forEach(b=>b.onclick=()=>{view.apprenticeshipTab=b.dataset.subtab;save();render()});
   $$('[data-a],[data-matrix-a]').forEach(x=>x.onclick=()=>{view.assignment=Number(x.dataset.a||x.dataset.matrixA);render()});
-  $$('[data-academy-ksb]').forEach(x=>x.onclick=()=>{view.tab='academy';view.academyModule=x.dataset.academyKsb;save();render()});
+  $$('[data-academy-topic]').forEach(x=>x.onclick=()=>{view.tab='academy';view.academyModule=x.dataset.academyTopic;save();render()});
+  $$('[data-witness-topic],[data-wt]').forEach(x=>x.onclick=()=>{view.witnessAssignment=Number(x.dataset.witnessTopic||x.dataset.wt);render()});
+  if($('#createWitness'))$('#createWitness').onclick=()=>{view.witnessAssignment=c.assignments[0].number;render()};
+}
+function renderWitnessTestimony(){
+  const c=course();let a=c.assignments.find(x=>x.number===Number(view.witnessAssignment))||c.assignments[0];
+  let wk=`${c.id}-WT${a.number}`,d=state.witnessTestimonies[wk]||{assignmentNumber:a.number,witnessName:'',jobTitle:'',employer:'',text:'',date:new Date().toISOString().slice(0,10),completed:false};
+  const hits=a.statementPrompts.filter(p=>promptHit(d.text,concisePrompt(p))).length,wc=words(d.text);
+  shell('Witness Testimony',`<button class="back" id="backWitness">‹ Back to Witness Testimonies</button><div class="card"><h2>Create witness testimony</h2><div class="form-row"><label>Assignment</label><select id="witnessAssignmentSelect">${c.assignments.map(x=>`<option value="${x.number}" ${x.number===a.number?'selected':''}>Assignment ${x.number}: ${esc(x.title)}</option>`).join('')}</select></div><div class="form-row"><label>Witness name</label><input id="witnessName" value="${esc(d.witnessName)}" placeholder="Employer or workplace witness"></div><div class="form-row"><label>Job title</label><input id="witnessRole" value="${esc(d.jobTitle)}" placeholder="Job title"></div><div class="form-row"><label>Employer</label><input id="witnessEmployer" value="${esc(d.employer)}" placeholder="Company or employer"></div><div class="form-row"><label>Date</label><input id="witnessDate" type="date" value="${esc(d.date)}"></div></div><div class="card"><h2>WT${a.number}: ${esc(a.title)}</h2><p class="muted">Describe what the witness personally observed. Use the same prompts as the selected assignment.</p><div id="witnessPrompts">${a.statementPrompts.map((p,i)=>`<div class="prompt ${promptHit(d.text,concisePrompt(p))?'ok':''}" data-wprompt="${i}"><div class="prompt-head"><span class="dot"></span><span>${esc(concisePrompt(p))}</span><small class="muted">${esc(p.ksb)}</small><button class="info" type="button">i</button></div><div class="detail"><b>Suggested things to confirm:</b><div class="suggestions">${suggestedPoints(p).map(x=>`<span>${esc(x)}</span>`).join('')}</div></div></div>`).join('')}</div><textarea class="textarea" id="witnessText" rows="14" autocapitalize="sentences" spellcheck="true" placeholder="Write the full witness testimony here...">${esc(d.text)}</textarea><div class="counter"><span id="witnessWords">${wc} words</span><span id="witnessHits">${hits} / ${a.statementPrompts.length} prompts</span></div><button class="btn btn-primary" id="saveWitness">Save witness testimony</button></div>`);
+  $('#backWitness').onclick=()=>{view.witnessAssignment=null;view.apprenticeshipTab='witness';render()};
+  $('#witnessAssignmentSelect').onchange=e=>{view.witnessAssignment=Number(e.target.value);render()};
+  $$('.info').forEach(b=>b.onclick=e=>{e.stopPropagation();b.closest('.prompt').querySelector('.detail').classList.toggle('open')});
+  const persist=()=>{d.witnessName=$('#witnessName').value.trim();d.jobTitle=$('#witnessRole').value.trim();d.employer=$('#witnessEmployer').value.trim();d.date=$('#witnessDate').value;d.text=$('#witnessText').value;state.witnessTestimonies[wk]=d;save()};
+  ['witnessName','witnessRole','witnessEmployer','witnessDate'].forEach(id=>$('#'+id).oninput=persist);
+  $('#witnessText').oninput=e=>{d.text=e.target.value;persist();const h=a.statementPrompts.filter(p=>promptHit(d.text,concisePrompt(p))).length;$('#witnessWords').textContent=`${words(d.text)} words`;$('#witnessHits').textContent=`${h} / ${a.statementPrompts.length} prompts`;a.statementPrompts.forEach((p,i)=>document.querySelector(`[data-wprompt="${i}"]`)?.classList.toggle('ok',promptHit(d.text,concisePrompt(p))))};
+  $('#saveWitness').onclick=()=>{persist();if(!d.witnessName||!d.jobTitle||!d.text.trim()){toast('Add the witness name, job title and testimony');return}d.completed=true;d.savedAt=new Date().toISOString();state.witnessTestimonies[wk]=d;save();toast(`WT${a.number} saved`);setTimeout(()=>{view.witnessAssignment=null;view.apprenticeshipTab='witness';render()},600)};
 }
 function getDraft(a){return state.drafts[key(a)]||{text:'',photos:Array(6).fill(null)}}
 function words(t){return (t.trim().match(/\b[\w'-]+\b/g)||[]).length}
