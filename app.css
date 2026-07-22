@@ -6,3 +6,15 @@
 .ksb-matrix{display:grid;gap:11px}.matrix-row{display:flex;align-items:flex-start;gap:13px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:var(--soft-shadow);transition:.2s}.matrix-row.complete{border-color:#39c979;background:linear-gradient(145deg,#f3fff7,#e9fff2);box-shadow:0 8px 22px rgba(28,184,99,.12)}
 .matrix-code{flex:0 0 58px;background:#e7f4f1;border-radius:14px;padding:10px 7px;text-align:center;font-weight:1000;color:#087061}.matrix-row.complete .matrix-code{background:var(--green);color:#063e43}.matrix-content{min-width:0;flex:1}.matrix-content h3{font-size:14px;line-height:1.35;margin:1px 0 11px}.matrix-assignments{display:flex;gap:7px;flex-wrap:wrap}.matrix-assignment{border:1px solid #b7d4cd;background:#f5fbf9;color:#315f59;border-radius:11px;padding:7px 9px;font-weight:900;cursor:pointer}.matrix-assignment.complete{background:#20c66c;border-color:#20c66c;color:#fff}
 @media(max-width:420px){.matrix-row{padding:13px;gap:10px}.matrix-code{flex-basis:52px}.matrix-content h3{font-size:13px}}
+
+/* Build 1.3 navigation and prompt refinements */
+.nav{height:88px;padding:7px 8px calc(7px + env(safe-area-inset-bottom));gap:5px;align-items:stretch}
+.nav button{position:relative;border-radius:19px;transition:transform .18s ease,background .18s ease,box-shadow .18s ease,color .18s ease;padding:7px 3px}
+.nav button.active{background:linear-gradient(145deg,#eaffdf,#dff8ec);color:#08765f;box-shadow:0 8px 18px rgba(6,111,91,.18),inset 0 0 0 2px #6ee42c;transform:translateY(-5px)}
+.nav button.active .ico{transform:scale(1.06)}
+.nav .ico{transition:transform .18s ease}
+.photo-placeholder b{font-size:14px;color:var(--ink)}
+.photo-placeholder small{font-size:11px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.prompt-head>span:nth-child(2){font-size:16px;text-transform:none}
+.install-note{min-height:20px;margin:12px 2px 0;color:#087061;font-weight:800}
+@media(max-width:430px){.nav button{font-size:10px}.nav .ico{font-size:22px}.nav{gap:3px;padding-left:4px;padding-right:4px}}
