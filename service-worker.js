@@ -1,4 +1,4 @@
-const VERSION='1.6';
+const VERSION='1.7';
 const CACHE=`applus-${VERSION}`;
 const CORE=['./','index.html','app.css','app.js','courses.js','manifest.json','version.json','logo.png','icon-192.png','icon-512.png'];
 

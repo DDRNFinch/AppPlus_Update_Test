@@ -1,9 +1,10 @@
 
 const $=(s,p=document)=>p.querySelector(s), $$=(s,p=document)=>[...p.querySelectorAll(s)];
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set(k,v){localStorage.setItem(k,JSON.stringify(v))}};
-let state=store.get('applus-state',{name:'Apprentice',courseId:'brick',xp:0,completed:{},drafts:{},rewards:[],tab:'home'});
-let view={tab:state.tab||'home',courseId:state.courseId||'brick',assignment:null,apprenticeshipTab:state.apprenticeshipTab||'assignments'};
-const APP_VERSION='1.6';
+let state=store.get('applus-state',{name:'Apprentice',courseId:'brick',xp:0,completed:{},drafts:{},rewards:[],academyPassed:{},academyScores:{},tab:'home'});
+state.academyPassed=state.academyPassed||{}; state.academyScores=state.academyScores||{};
+let view={tab:state.tab||'home',courseId:state.courseId||'brick',assignment:null,academyModule:null,apprenticeshipTab:state.apprenticeshipTab||'assignments'};
+const APP_VERSION='1.7';
 let deferredInstallPrompt=null;
 let swRegistration=null;
 let refreshingForUpdate=false;
@@ -16,10 +17,59 @@ function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt
 function toast(t){document.body.insertAdjacentHTML('beforeend',`<div class="toast">${esc(t)}</div>`);setTimeout(()=>$('.toast')?.remove(),1800)}
 function header(title){return `<header class="header"><div class="brand"><img src="logo.png"><div><div class="eyebrow">APPRENTICE+</div><h1>${esc(title)}</h1><div class="subtitle">Your Course, Your Way</div><span class="build">Build ${APP_VERSION}</span></div></div></header>`}
 const nav=()=>`<nav class="nav">${[['home','⌂','Home'],['academy','☆','Academy'],['apprenticeship','▣','Apprenticeship'],['documents','▤','Documents'],['settings','⚙','Settings']].map(([id,i,l])=>`<button data-tab="${id}" class="${view.tab===id?'active':''}"><span class="ico">${i}</span>${l}</button>`).join('')}</nav>`;
-function shell(title,body){$('#app').innerHTML=`<div class="app">${header(title)}<main class="main">${body}</main>${nav()}</div>`;$$('[data-tab]').forEach(b=>b.onclick=()=>{view.tab=b.dataset.tab;view.assignment=null;save();render()})}
-function render(){if(view.assignment)return renderAssignment();({home:renderHome,academy:renderAcademy,apprenticeship:renderApprenticeship,documents:renderDocuments,settings:renderSettings}[view.tab]||renderHome)()}
+function shell(title,body){$('#app').innerHTML=`<div class="app">${header(title)}<main class="main">${body}</main>${nav()}</div>`;$$('[data-tab]').forEach(b=>b.onclick=()=>{view.tab=b.dataset.tab;view.assignment=null;view.academyModule=null;save();render()})}
+function render(){if(view.assignment)return renderAssignment();if(view.academyModule)return renderAcademyModule();({home:renderHome,academy:renderAcademy,apprenticeship:renderApprenticeship,documents:renderDocuments,settings:renderSettings}[view.tab]||renderHome)()}
 function renderHome(){let total=APP_COURSES.reduce((n,c)=>n+c.assignments.length,0),done=Object.keys(state.completed).length; shell('Home',`<section class="hero"><div class="muted" style="color:#c9e7df">Welcome back,</div><div class="big">${esc(state.name)}</div><p>Build evidence, complete assignments and track your apprenticeship progress.</p><button class="btn btn-primary" id="continue">Continue apprenticeship</button></section><h2 class="section-title">Your progress</h2><div class="grid"><div class="stat"><b>${done}</b>Assignments complete</div><div class="stat"><b>${state.xp||0}</b>Total XP</div></div><div class="card"><h2>${esc(course().name)}</h2><p class="muted">${course().reference} · Version ${course().version}</p><div class="progress"><span style="width:${Math.round(completedCount()/course().assignments.length*100)}%"></span></div><p><b>${completedCount()} / ${course().assignments.length}</b> assignments</p></div><div class="card"><h2>Quick actions</h2><div class="grid"><button class="btn btn-secondary" data-go="academy">Open Academy</button><button class="btn btn-secondary" data-go="documents">View documents</button></div></div>`);$('#continue').onclick=()=>{view.tab='apprenticeship';render()};$$('[data-go]').forEach(b=>b.onclick=()=>{view.tab=b.dataset.go;render()})}
-function renderAcademy(){let modules=['Health & Safety Essentials','Sustainability at Work','Maths for Construction','English for Evidence','EPA Knowledge Practice','Professional Behaviours'];shell('Academy',`<div class="card"><h2>Learning Academy</h2><p class="muted">Short revision modules and knowledge checks. Completed modules award XP.</p></div><div class="list">${modules.map((m,i)=>`<div class="assignment academy-item"><div class="num">${i+1}</div><div class="grow"><h3>${m}</h3><div class="muted">10 learning cards · 10 questions</div></div><span>›</span></div>`).join('')}</div>`);$$('.academy-item').forEach((x,i)=>x.onclick=()=>toast('Academy module ready for the next build phase'))}
+function academyModules(c=course()){
+  return ksbMatrix(c).map((row,i)=>({
+    id:`${c.id}-${row.code}`,
+    code:row.code,
+    title:row.description||row.code,
+    description:row.description||row.code,
+    order:i+1
+  }));
+}
+function academyPoints(m){
+  const text=m.description.replace(/\s+/g,' ').trim();
+  const parts=text.split(/[.;:]\s*/).map(x=>x.trim()).filter(x=>x.length>10);
+  const generic=[
+    `Explain what ${m.code} means in your own words.`,
+    `Identify where ${m.code} applies during normal work.`,
+    `Describe the correct procedure or standard linked to ${m.code}.`,
+    `Give a workplace example that demonstrates ${m.code}.`,
+    `Explain how you would check that ${m.code} has been followed correctly.`
+  ];
+  const out=[];
+  for(const part of parts){if(!out.includes(part))out.push(part);if(out.length===5)break}
+  while(out.length<5)out.push(generic[out.length]);
+  return out.slice(0,5);
+}
+function academyQuestions(m){
+  const pts=academyPoints(m);
+  return pts.map((point,i)=>({
+    q:`Which option best supports ${m.code}: ${point}`,
+    options:[
+      point,
+      'Ignore the requirement if the task is nearly finished.',
+      'Use any method without checking the information provided.',
+      'Leave the responsibility entirely to another person.'
+    ],
+    answer:0
+  }));
+}
+function renderAcademy(){
+  const c=course(), modules=academyModules(c), passed=modules.filter(m=>state.academyPassed[m.id]).length;
+  shell('Academy',`<div class="course-banner"><span>Selected course</span><strong>${esc(c.name)}</strong></div><div class="card academy-overview"><h2>Course Academy</h2><p class="muted">Each course-specific topic supports one KSB. Passing a topic adds supporting evidence to the KSB Matrix but does not complete the KSB.</p><div class="progress"><span style="width:${modules.length?Math.round(passed/modules.length*100):0}%"></span></div><p><b>${passed} / ${modules.length}</b> topics passed</p></div><div class="list">${modules.map(m=>{const done=!!state.academyPassed[m.id],score=state.academyScores[m.id];return `<div class="assignment academy-item ${done?'academy-passed':''}" data-module="${esc(m.id)}"><div class="num">${done?'✓':m.code}</div><div class="grow"><h3>${esc(m.title)}</h3><div class="muted">${done?`Passed${score!=null?` · ${score}%`:''}`:'5 learning points · 5 questions · 80% pass'}</div></div><span>›</span></div>`}).join('')}</div>`);
+  $$('[data-module]').forEach(x=>x.onclick=()=>{view.academyModule=x.dataset.module;render()});
+}
+function renderAcademyModule(){
+  const c=course(),m=academyModules(c).find(x=>x.id===view.academyModule);
+  if(!m){view.academyModule=null;return renderAcademy()}
+  const points=academyPoints(m),qs=academyQuestions(m),passed=!!state.academyPassed[m.id];
+  shell('Academy',`<button class="back" id="backAcademy">‹ Back to Academy</button><div class="card academy-topic"><span class="academy-ksb">${esc(m.code)}</span><h2>${esc(m.title)}</h2><p class="muted">This topic provides supporting evidence for ${esc(m.code)}. It does not complete the KSB.</p></div><div class="card"><h2>Learning points</h2><div class="learning-points">${points.map((p,i)=>`<div><b>${i+1}</b><span>${esc(p)}</span></div>`).join('')}</div></div><form class="card academy-quiz" id="academyQuiz"><h2>Knowledge check</h2><p class="muted">Score at least 80% to pass.</p>${qs.map((q,qi)=>`<fieldset><legend>${qi+1}. ${esc(q.q)}</legend>${q.options.map((o,oi)=>`<label><input type="radio" name="q${qi}" value="${oi}"> <span>${esc(o)}</span></label>`).join('')}</fieldset>`).join('')}<button class="btn btn-primary" type="submit">${passed?'Retake topic':'Submit answers'}</button><div class="quiz-result" id="quizResult">${passed?`Previously passed${state.academyScores[m.id]!=null?` with ${state.academyScores[m.id]}%`:''}.`:''}</div></form>`);
+  $('#backAcademy').onclick=()=>{view.academyModule=null;render()};
+  $('#academyQuiz').onsubmit=e=>{e.preventDefault();let correct=0,answered=0;qs.forEach((q,i)=>{const picked=$(`input[name="q${i}"]:checked`);if(picked){answered++;if(Number(picked.value)===q.answer)correct++}});if(answered<qs.length){$('#quizResult').textContent='Answer all five questions before submitting.';return}const score=Math.round(correct/qs.length*100);state.academyScores[m.id]=score;if(score>=80){state.academyPassed[m.id]=true;state.xp=(state.xp||0)+Math.max(1,score-80);$('#quizResult').innerHTML=`<strong>Passed — ${score}%</strong><br>This topic is now shown as full yellow supporting evidence in the KSB Matrix.`;toast(`${m.code} Academy topic passed`)}else{$('#quizResult').innerHTML=`<strong>Not passed — ${score}%</strong><br>Review the learning points and try again.`}save()};
+}
 function ksbCode(value=''){return String(value).match(/^[KSB]\d+/i)?.[0].toUpperCase()||String(value).trim()}
 function ksbMatrix(c){
   const map=new Map();
@@ -35,11 +85,11 @@ function renderApprenticeship(){
   let c=course(),pct=Math.round(completedCount(c)/c.assignments.length*100),sub=view.apprenticeshipTab||'assignments';
   const assignments=`<h2 class="section-title">Assignments</h2><div class="list">${c.assignments.map(a=>{let d=state.completed[`${c.id}-${a.number}`];return `<div class="assignment ${d?'done':''}" data-a="${a.number}"><div class="num">${d?'✓':a.number}</div><div class="grow"><h3>Assignment ${a.number}: ${esc(a.title)}</h3><div class="muted">6 photos · 100+ word statement</div></div><span>›</span></div>`}).join('')}</div>`;
   const rows=ksbMatrix(c);
-  const matrix=`<div class="card matrix-intro"><h2>KSB Matrix</h2><p class="muted">See exactly which assignments cover each Knowledge, Skill and Behaviour. A KSB turns green when every assignment mapped to it has been completed.</p><div class="matrix-summary"><span><b>${rows.filter(r=>r.assignments.every(a=>state.completed[`${c.id}-${a.number}`])).length}</b> complete</span><span><b>${rows.length}</b> total KSBs</span></div></div><div class="ksb-matrix">${rows.map(r=>{const done=r.assignments.length>0&&r.assignments.every(a=>state.completed[`${c.id}-${a.number}`]);return `<div class="matrix-row ${done?'complete':''}"><div class="matrix-code">${done?'✓ ':''}${esc(r.code)}</div><div class="matrix-content"><h3>${esc(r.description||r.code)}</h3><div class="matrix-assignments">${r.assignments.map(a=>{const adone=!!state.completed[`${c.id}-${a.number}`];return `<button class="matrix-assignment ${adone?'complete':''}" data-matrix-a="${a.number}" title="${esc(a.title)}">${adone?'✓ ':''}A${a.number}</button>`}).join('')}</div></div></div>`}).join('')}</div>`;
-  shell('Apprenticeship',`<div class="card"><div class="form-row"><label><b>Course</b></label><select id="courseSelect">${APP_COURSES.map(x=>`<option value="${x.id}" ${x.id===c.id?'selected':''}>${esc(x.name)} — ${x.reference}</option>`).join('')}</select></div><div class="progress"><span style="width:${pct}%"></span></div><p><b>${completedCount(c)} / ${c.assignments.length}</b> completed · ${pct}%</p></div><div class="subtabs"><button class="${sub==='assignments'?'active':''}" data-subtab="assignments">Assignments</button><button class="${sub==='matrix'?'active':''}" data-subtab="matrix">KSB Matrix</button></div>${sub==='assignments'?assignments:matrix}`);
-  $('#courseSelect').onchange=e=>{view.courseId=e.target.value;save();render()};
+  const matrix=`<div class="card matrix-intro"><h2>KSB Matrix</h2><p class="muted">Green shows completed assignment evidence. Yellow shows Academy supporting evidence. Academy evidence supports a KSB but never completes it.</p><div class="matrix-legend"><span class="legend-assignment">Assignment complete</span><span class="legend-academy pending">Academy not passed</span><span class="legend-academy passed">Academy passed</span></div></div><div class="ksb-matrix">${rows.map(r=>{const done=r.assignments.length>0&&r.assignments.every(a=>state.completed[`${c.id}-${a.number}`]);const aid=`${c.id}-${r.code}`,apassed=!!state.academyPassed[aid];return `<div class="matrix-row ${done?'complete':''}"><div class="matrix-code">${done?'✓ ':''}${esc(r.code)}</div><div class="matrix-content"><h3>${esc(r.description||r.code)}</h3><div class="matrix-evidence"><div class="matrix-assignments">${r.assignments.map(a=>{const adone=!!state.completed[`${c.id}-${a.number}`];return `<button class="matrix-assignment ${adone?'complete':''}" data-matrix-a="${a.number}" title="${esc(a.title)}">${adone?'✓ ':''}A${a.number}</button>`}).join('')}</div><button class="academy-support ${apassed?'passed':'pending'}" data-academy-ksb="${esc(aid)}">${apassed?'✓ Academy passed':'Academy support'}</button></div></div></div>`}).join('')}</div>`;
+  shell('Apprenticeship',`<div class="card"><div class="course-banner fixed"><span>Current course</span><strong>${esc(c.name)}</strong></div><div class="progress"><span style="width:${pct}%"></span></div><p><b>${completedCount(c)} / ${c.assignments.length}</b> completed · ${pct}%</p></div><div class="subtabs"><button class="${sub==='assignments'?'active':''}" data-subtab="assignments">Assignments</button><button class="${sub==='matrix'?'active':''}" data-subtab="matrix">KSB Matrix</button></div>${sub==='assignments'?assignments:matrix}`);
   $$('[data-subtab]').forEach(b=>b.onclick=()=>{view.apprenticeshipTab=b.dataset.subtab;save();render()});
   $$('[data-a],[data-matrix-a]').forEach(x=>x.onclick=()=>{view.assignment=Number(x.dataset.a||x.dataset.matrixA);render()});
+  $$('[data-academy-ksb]').forEach(x=>x.onclick=()=>{view.tab='academy';view.academyModule=x.dataset.academyKsb;save();render()});
 }
 function getDraft(a){return state.drafts[key(a)]||{text:'',photos:Array(6).fill(null)}}
 function words(t){return (t.trim().match(/\b[\w'-]+\b/g)||[]).length}
