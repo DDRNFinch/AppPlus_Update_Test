@@ -1,1 +1,13 @@
-{"version":"V2.4 Phase 1","build":"V2.4 Phase 1","whatsNew":["Added the shared continuous assignment workflow engine for every course.","Assignment statuses now use Not started, In progress, Choose supporting evidence, Supporting evidence in progress, Ready to download, Downloaded, Uploaded and Completed by RPL.","Existing saved assignments, TA results, practical assessments, witness testimonies, RPL records and upload confirmations are migrated automatically without deleting learner evidence.","Downloading an assignment evidence pack now records the Downloaded stage.","RPL assignments are recognised by the workflow and can identify the next non-RPL assignment."]}
+{
+  "version": "V2.4 Phase 6",
+  "build": "V2.4 Phase 6",
+  "whatsNew": [
+    "Unified the guided assignment journey across every course.",
+    "Opening an assignment now resumes its exact current workflow stage.",
+    "Supporting evidence in progress reopens the selected TA, PA or WT route.",
+    "Ready, downloaded and uploaded assignments open the correct evidence screen.",
+    "RPL assignments skip directly to the next non-RPL assignment.",
+    "Added automatic migration for existing learner progress and workflow records.",
+    "Updated offline caching so the final integrated build replaces earlier phases."
+  ]
+}
