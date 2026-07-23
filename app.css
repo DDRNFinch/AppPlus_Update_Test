@@ -121,3 +121,13 @@ input,textarea,[contenteditable="true"],.statement,.learner-note-card p,.support
 .assignment-status span{width:8px;height:8px;border-radius:50%;background:currentColor}
 .status-not-started{background:#f1f2f3;color:#697277}.status-in-progress{background:#e6f3ff;color:#176aa0}.status-choose-supporting-evidence{background:#fff0df;color:#a65b09}.status-supporting-evidence-in-progress{background:#fff7cf;color:#87700b}.status-ready-to-download{background:#e5f7e7;color:#287532}.status-downloaded{background:#eee8fb;color:#6543a1}.status-uploaded{background:#dff5e4;color:#176b2e}.status-completed-by-rpl{background:#e3f5ef;color:#116b57}
 @media(max-width:520px){.course-progress-heading h2{font-size:1.12rem}.course-progress-heading>strong{font-size:1.45rem}.course-next-action{padding:12px}.workflow-assignment .num{min-width:38px}}
+
+/* Two-supporting-evidence workflow */
+.support-route-grid button.support-route-complete,
+.support-route-grid button:disabled.support-route-complete{
+  opacity:1;
+  border-color:#65de31;
+  background:#edfbe8;
+  color:#075f62;
+}
+.support-route-grid button.support-route-complete b{color:#159449}

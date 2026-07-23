@@ -1,10 +1,10 @@
 {
-  "version": "V2.4 Phase 6 Fix 1",
-  "build": "V2.4 Phase 6 Fix 1",
+  "version": "2.4.8",
+  "build": "V2.4 Two Evidence Workflow",
   "whatsNew": [
-    "Fixed Mark as uploaded remaining disabled after downloading evidence on mobile.",
-    "The downloaded workflow state is now saved before the browser download starts.",
-    "The Evidence Ready screen refreshes immediately after the download is prepared.",
-    "Mark as uploaded can now be confirmed after the learner uploads evidence externally."
+    "Each assignment now requires the completed AS plus two different supporting evidence routes.",
+    "After the first TA, PA or WT is completed, the learner is guided to choose a different second route.",
+    "Download and upload remain locked until two supporting evidence routes are complete.",
+    "Valid routes include AS + PA + WT, AS + PA + TA, or AS + WT + TA in either order."
   ]
 }
