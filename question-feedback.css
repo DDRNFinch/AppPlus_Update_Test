@@ -1,0 +1,21 @@
+.academy-quiz label.answer-correct {
+  border-color: #21bd70 !important;
+  background: #e7faee !important;
+  box-shadow: 0 0 0 2px rgba(33, 189, 112, .12);
+}
+.academy-quiz label.answer-incorrect {
+  border-color: #d75666 !important;
+  background: #fff0f2 !important;
+}
+.question-answer-feedback {
+  display: grid;
+  gap: 4px;
+  margin-top: 13px;
+  padding: 12px;
+  border-radius: 13px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.question-answer-feedback.correct { background: #e7faee; color: #08704b; }
+.question-answer-feedback.incorrect { background: #fff0f2; color: #933747; }
+.question-answer-feedback b { font-size: 15px; }
