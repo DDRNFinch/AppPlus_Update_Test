@@ -1,3 +1,9 @@
+AppPlus V3.1
+
+Current release: V3.1
+Assignment workflow: AS plus two different supporting evidence routes, then download, upload and completion.
+Update checker: same-build reminders are cleared after installation.
+
 Apprentice+ Build 2.3
 
 Upload every file in this ZIP directly to the root of the GitHub repository.

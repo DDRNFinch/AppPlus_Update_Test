@@ -1,10 +1,10 @@
 {
-  "version": "2.4.8",
-  "build": "V2.4 Two Evidence Workflow",
+  "version": "3.1",
+  "build": "AppPlus V3.1",
   "whatsNew": [
-    "Each assignment now requires the completed AS plus two different supporting evidence routes.",
-    "After the first TA, PA or WT is completed, the learner is guided to choose a different second route.",
-    "Download and upload remain locked until two supporting evidence routes are complete.",
-    "Valid routes include AS + PA + WT, AS + PA + TA, or AS + WT + TA in either order."
+    "Assignments require the completed AS plus two different supporting evidence routes before download and upload unlock.",
+    "The KSB matrix recognises Skills through AS with PA or WT, and Knowledge and Behaviours through AS with TA or WT.",
+    "The app now identifies itself throughout as AppPlus V3.1.",
+    "The update checker no longer repeatedly announces the same installed build."
   ]
 }

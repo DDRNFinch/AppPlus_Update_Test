@@ -7,8 +7,8 @@ state.signature=state.signature||''; state.academyPassed=state.academyPassed||{}
 state.accessibility=state.accessibility||{};state.learnerNotes=state.learnerNotes||[];state.portfolioUploads=state.portfolioUploads||{};state.onlinePortfolioUrl=state.onlinePortfolioUrl||'';state.demoCompleted=state.demoCompleted||false;state.demoDisclaimerAccepted=state.demoDisclaimerAccepted||false;state.lastBackupReminder=state.lastBackupReminder||'';state.lastStorageWarning=state.lastStorageWarning||'';state.openPanels=state.openPanels||{};state.knowledgeRefresh=state.knowledgeRefresh||{};state.rplRefresh=state.rplRefresh||{};
 state.rpl=state.rpl||{};state.assignmentWorkflow=state.assignmentWorkflow||{};
 let view={tab:state.tab||'home',courseId:state.courseId||'brick',assignment:null,assignmentComplete:null,academyModule:null,academyTest:null,academySection:null,learningActivity:null,learningItem:0,revisionPack:null,revisionSlide:0,inhouseQuiz:false,trainingSlide:0,witnessAssignment:null,practicalAssessment:null,supportEvidenceReady:null,epaMock:null,rewardApp:null,rewardsPage:null,notepad:false,learnerNote:null,apprenticeshipTab:state.apprenticeshipTab||'assignments'};
-const APP_VERSION='V2.4 Two Evidence Workflow';
-if(!document.querySelector('link[href*="question-feedback.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="question-feedback.css?v=2.4">');
+const APP_VERSION='3.1';
+if(!document.querySelector('link[href*="question-feedback.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="question-feedback.css?v=3.1">');
 let deferredInstallPrompt=null;
 let swRegistration=null;
 let refreshingForUpdate=false;
@@ -283,11 +283,16 @@ async function checkForAppUpdate({announce=true}={}){
   try{
     const response=await fetch(`version.json?t=${Date.now()}`,{cache:'no-store'});
     if(!response.ok)return false;
-    const release=await response.json(),latest=String(release.version||APP_VERSION);
+    const release=await response.json(),latest=String(release.version||APP_VERSION).trim();
     latestRelease={version:latest,whatsNew:Array.isArray(release.whatsNew)?release.whatsNew:[]};
-    if(latest===APP_VERSION)return false;
-    if(announce&&announcedUpdate!==latest&&!$('.app-notification-wrap')){
-      announcedUpdate=latest;
+    const normaliseVersion=value=>String(value||'').trim().replace(/^v/i,'').split(/[ -]/)[0];
+    if(normaliseVersion(latest)===normaliseVersion(APP_VERSION)){
+      try{localStorage.setItem('appplus-installed-build',normaliseVersion(APP_VERSION));localStorage.removeItem('appplus-announced-update')}catch{}
+      return false;
+    }
+    let previouslyAnnounced='';try{previouslyAnnounced=localStorage.getItem('appplus-announced-update')||''}catch{}
+    if(announce&&announcedUpdate!==latest&&previouslyAnnounced!==latest&&!$('.app-notification-wrap')){
+      announcedUpdate=latest;try{localStorage.setItem('appplus-announced-update',latest)}catch{}
       showAppNotification({type:'updates',icon:'↻',title:`Build ${latest} is available`,message:'A new Apprentice+ update is ready. You can review what changed or download it now.',primary:"What's new",secondary:'Download update',onPrimary:()=>{view.tab='whatsnew';save();render()},onSecondary:downloadAvailableUpdate});
     }
     return true;
@@ -864,7 +869,8 @@ function renderSettings(){
       latestEl.textContent=`Build ${latestVersion}`;
       const reg=swRegistration||await navigator.serviceWorker?.getRegistration();
       if(reg)await reg.update();
-      if(latestVersion!==APP_VERSION||reg?.waiting){
+      const normaliseVersion=value=>String(value||'').trim().replace(/^v/i,'').split(/[ -]/)[0];
+      if(normaliseVersion(latestVersion)!==normaliseVersion(APP_VERSION)||reg?.waiting){
         statusEl.className='update-status available';statusEl.textContent=`Update available: Build ${latestVersion}.`;
         downloadBtn.hidden=false;whatsNewBtn.hidden=false;
       }else{
