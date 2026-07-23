@@ -1,3 +1,40 @@
 .revision-hero{background:linear-gradient(135deg,#073f43,#0a6a68);color:#fff;border:3px solid var(--green);border-radius:24px;padding:22px;margin-bottom:18px}.revision-hero span,.revision-pack-card>span,.revision-slide>span{font-size:10px;letter-spacing:1.2px;font-weight:900;color:var(--green)}.revision-hero h2{font-size:30px;margin:5px 0}.revision-hero p{margin:0;line-height:1.5}.revision-pack-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.revision-pack-card{text-align:left;border:2px solid #b8d9d3;border-radius:20px;background:#fff;padding:18px;color:var(--teal);box-shadow:var(--soft-shadow)}.revision-pack-card h3{font-size:18px;margin:7px 0}.revision-pack-card p{font-size:12px;color:var(--muted);line-height:1.4}.revision-pack-card b{color:var(--green2)}.revision-banner{background:linear-gradient(135deg,#073f43,#0a6a68)}.revision-slide{min-height:440px;display:flex;flex-direction:column}.revision-slide h2{font-size:25px;margin:10px 0}.revision-slide h3{font-size:18px}.revision-slide>p{font-size:16px;line-height:1.65}.revision-slide .training-progress{margin-top:auto}.revision-options{display:grid;gap:9px}.revision-options label{display:flex;gap:10px;border:2px solid var(--line);border-radius:14px;padding:13px}.revision-options label:has(input:checked){border-color:var(--green2);background:#effbf6}.revision-options .correct{border-color:#20bf75;background:#e4f8ec}.revision-options .incorrect{border-color:#d85c69;background:#fff0f2}.revision-feedback{font-size:13px;line-height:1.45;margin:12px 0;font-weight:800}@media(max-width:430px){.revision-pack-grid{grid-template-columns:1fr}.revision-slide{min-height:480px}}
 .revision-library-label{display:flex;justify-content:space-between;align-items:center;margin:8px 3px 12px;color:var(--teal)}.revision-library-label b{font-size:12px;letter-spacing:1px}.revision-library-label span{font-size:10px;background:#e8f5f1;border-radius:99px;padding:6px 9px}.quiz-resume-modal{text-align:center}.quiz-resume-modal>span{color:var(--green2);font-size:10px;font-weight:900;letter-spacing:1px}.quiz-resume-modal h3{font-size:23px;margin:6px 0}.quiz-resume-modal p{color:var(--muted);line-height:1.45}.quiz-resume-modal .btn{width:100%;margin-top:8px}
 .trade-revision-grid{margin-bottom:24px}.trade-pack-card{border-left:5px solid var(--green)}.trade-pack-card>span{color:var(--teal)}
+
+/* Revision focus mode: every teaching and question slide fits one phone screen. */
+.revision-focus-mode{overflow:hidden}
+.revision-focus-mode .app{height:100dvh;min-height:0;padding-bottom:72px;overflow:hidden}
+.revision-focus-mode .header{height:58px;padding:8px 56px 8px 14px;border-bottom-width:3px}
+.revision-focus-mode .brand{min-height:38px}
+.revision-focus-mode .brand img,.revision-focus-mode .eyebrow,.revision-focus-mode .subtitle,.revision-focus-mode .build{display:none}
+.revision-focus-mode .header h1{font-size:21px;margin:0}
+.revision-focus-mode .main{height:calc(100dvh - 130px);padding:7px 10px;overflow:hidden}
+.revision-focus-mode .back{font-size:11px;margin:0 0 4px;padding:1px 0}
+.revision-focus-mode .revision-banner{border-radius:12px;padding:7px 10px;margin-bottom:5px}
+.revision-focus-mode .revision-banner span{font-size:8px}
+.revision-focus-mode .revision-banner strong{font-size:10px;margin-top:1px}
+.revision-focus-mode .revision-slide{height:calc(100% - 57px);min-height:0;margin:0;padding:10px 12px;border-radius:18px;overflow:hidden}
+.revision-focus-mode .revision-slide>span{font-size:8px}
+.revision-focus-mode .revision-slide h2{font-size:15px;line-height:1.15;margin:4px 0}
+.revision-focus-mode .revision-slide h3{font-size:14px;line-height:1.2;margin:4px 0}
+.revision-focus-mode .revision-slide>p{font-size:12px;line-height:1.35;margin:3px 0}
+.revision-focus-mode .revision-options{gap:4px}
+.revision-focus-mode .revision-options label{gap:6px;border-width:1px;border-radius:10px;padding:6px 8px;font-size:10px;line-height:1.2}
+.revision-focus-mode .revision-options input{margin:1px 0 0;flex:0 0 auto}
+.revision-focus-mode .revision-feedback{font-size:10px;line-height:1.2;margin:5px 0}
+.revision-focus-mode .training-progress{height:6px;margin-top:auto;margin-bottom:5px}
+.revision-focus-mode .training-controls{gap:6px}
+.revision-focus-mode .training-controls .btn{min-height:34px;padding:7px 9px;border-radius:11px;font-size:11px}
+.revision-focus-mode .nav{height:72px;padding-top:3px;padding-bottom:calc(3px + env(safe-area-inset-bottom))}
+.revision-focus-mode .nav button{font-size:8px;padding:2px}
+.revision-focus-mode .nav .ico{font-size:17px;margin-bottom:1px}
+@media(max-height:700px){
+  .revision-focus-mode .header{height:48px}
+  .revision-focus-mode .main{height:calc(100dvh - 112px);padding-top:4px}
+  .revision-focus-mode .app{padding-bottom:64px}
+  .revision-focus-mode .nav{height:64px}
+  .revision-focus-mode .revision-slide{height:calc(100% - 50px);padding:7px 10px}
+  .revision-focus-mode .revision-slide>p{font-size:11px;line-height:1.27}
+  .revision-focus-mode .revision-options label{font-size:9px;padding:5px 7px}
+}
